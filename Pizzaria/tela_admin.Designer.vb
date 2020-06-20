@@ -49,9 +49,9 @@ Partial Class tela_admin
         '
         Me.btn_pizza.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.btn_pizza.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_pizza.Location = New System.Drawing.Point(676, 400)
+        Me.btn_pizza.Location = New System.Drawing.Point(760, 450)
         Me.btn_pizza.Name = "btn_pizza"
-        Me.btn_pizza.Size = New System.Drawing.Size(232, 62)
+        Me.btn_pizza.Size = New System.Drawing.Size(261, 70)
         Me.btn_pizza.TabIndex = 30
         Me.btn_pizza.Text = "CADASTRAR PIZZA"
         Me.btn_pizza.UseVisualStyleBackColor = True
@@ -60,9 +60,9 @@ Partial Class tela_admin
         '
         Me.btn_pedidos.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.btn_pedidos.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_pedidos.Location = New System.Drawing.Point(915, 400)
+        Me.btn_pedidos.Location = New System.Drawing.Point(1029, 450)
         Me.btn_pedidos.Name = "btn_pedidos"
-        Me.btn_pedidos.Size = New System.Drawing.Size(252, 62)
+        Me.btn_pedidos.Size = New System.Drawing.Size(284, 70)
         Me.btn_pedidos.TabIndex = 29
         Me.btn_pedidos.Text = "PEDIDOS"
         Me.btn_pedidos.UseVisualStyleBackColor = True
@@ -71,7 +71,7 @@ Partial Class tela_admin
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(1172, 406)
+        Me.Label3.Location = New System.Drawing.Point(1318, 457)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(79, 27)
         Me.Label3.TabIndex = 28
@@ -81,7 +81,7 @@ Partial Class tela_admin
         '
         Me.lbl_usuario.AutoSize = True
         Me.lbl_usuario.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_usuario.Location = New System.Drawing.Point(1173, 439)
+        Me.lbl_usuario.Location = New System.Drawing.Point(1320, 494)
         Me.lbl_usuario.Name = "lbl_usuario"
         Me.lbl_usuario.Size = New System.Drawing.Size(78, 27)
         Me.lbl_usuario.TabIndex = 27
@@ -90,25 +90,25 @@ Partial Class tela_admin
         'txt_busca
         '
         Me.txt_busca.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_busca.Location = New System.Drawing.Point(116, 400)
+        Me.txt_busca.Location = New System.Drawing.Point(130, 450)
         Me.txt_busca.Name = "txt_busca"
-        Me.txt_busca.Size = New System.Drawing.Size(321, 30)
+        Me.txt_busca.Size = New System.Drawing.Size(361, 30)
         Me.txt_busca.TabIndex = 26
         '
         'cmb_parametro
         '
         Me.cmb_parametro.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmb_parametro.FormattingEnabled = True
-        Me.cmb_parametro.Location = New System.Drawing.Point(116, 436)
+        Me.cmb_parametro.Location = New System.Drawing.Point(130, 490)
         Me.cmb_parametro.Name = "cmb_parametro"
-        Me.cmb_parametro.Size = New System.Drawing.Size(204, 30)
+        Me.cmb_parametro.Size = New System.Drawing.Size(229, 30)
         Me.cmb_parametro.TabIndex = 25
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(58, 438)
+        Me.Label2.Location = New System.Drawing.Point(65, 493)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(55, 27)
         Me.Label2.TabIndex = 24
@@ -118,7 +118,7 @@ Partial Class tela_admin
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(17, 402)
+        Me.Label1.Location = New System.Drawing.Point(19, 452)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(96, 27)
         Me.Label1.TabIndex = 23
@@ -128,9 +128,9 @@ Partial Class tela_admin
         '
         Me.btn_criar_conta.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.btn_criar_conta.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_criar_conta.Location = New System.Drawing.Point(460, 400)
+        Me.btn_criar_conta.Location = New System.Drawing.Point(518, 450)
         Me.btn_criar_conta.Name = "btn_criar_conta"
-        Me.btn_criar_conta.Size = New System.Drawing.Size(210, 62)
+        Me.btn_criar_conta.Size = New System.Drawing.Size(236, 70)
         Me.btn_criar_conta.TabIndex = 22
         Me.btn_criar_conta.Text = "NOVA CONTA"
         Me.btn_criar_conta.UseVisualStyleBackColor = True
@@ -149,7 +149,7 @@ Partial Class tela_admin
         Me.dgv_usuarios.ReadOnly = True
         Me.dgv_usuarios.RowHeadersWidth = 51
         Me.dgv_usuarios.RowTemplate.Height = 24
-        Me.dgv_usuarios.Size = New System.Drawing.Size(1270, 491)
+        Me.dgv_usuarios.Size = New System.Drawing.Size(1524, 547)
         Me.dgv_usuarios.TabIndex = 21
         '
         'Column1
@@ -158,7 +158,7 @@ Partial Class tela_admin
         Me.Column1.MinimumWidth = 6
         Me.Column1.Name = "Column1"
         Me.Column1.ReadOnly = True
-        Me.Column1.Width = 78
+        Me.Column1.Width = 83
         '
         'Column2
         '
@@ -166,7 +166,7 @@ Partial Class tela_admin
         Me.Column2.MinimumWidth = 6
         Me.Column2.Name = "Column2"
         Me.Column2.ReadOnly = True
-        Me.Column2.Width = 82
+        Me.Column2.Width = 85
         '
         'Column3
         '
@@ -174,7 +174,7 @@ Partial Class tela_admin
         Me.Column3.MinimumWidth = 6
         Me.Column3.Name = "Column3"
         Me.Column3.ReadOnly = True
-        Me.Column3.Width = 84
+        Me.Column3.Width = 88
         '
         'Column9
         '
@@ -182,7 +182,7 @@ Partial Class tela_admin
         Me.Column9.MinimumWidth = 6
         Me.Column9.Name = "Column9"
         Me.Column9.ReadOnly = True
-        Me.Column9.Width = 84
+        Me.Column9.Width = 88
         '
         'Column4
         '
@@ -190,7 +190,7 @@ Partial Class tela_admin
         Me.Column4.MinimumWidth = 6
         Me.Column4.Name = "Column4"
         Me.Column4.ReadOnly = True
-        Me.Column4.Width = 92
+        Me.Column4.Width = 95
         '
         'Column5
         '
@@ -201,7 +201,7 @@ Partial Class tela_admin
         Me.Column5.Name = "Column5"
         Me.Column5.ReadOnly = True
         Me.Column5.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Column5.Width = 91
+        Me.Column5.Width = 97
         '
         'Column7
         '
@@ -211,7 +211,7 @@ Partial Class tela_admin
         Me.Column7.MinimumWidth = 6
         Me.Column7.Name = "Column7"
         Me.Column7.ReadOnly = True
-        Me.Column7.Width = 63
+        Me.Column7.Width = 64
         '
         'Column10
         '
@@ -221,7 +221,7 @@ Partial Class tela_admin
         Me.Column10.MinimumWidth = 6
         Me.Column10.Name = "Column10"
         Me.Column10.ReadOnly = True
-        Me.Column10.Width = 64
+        Me.Column10.Width = 67
         '
         'Column6
         '
@@ -231,13 +231,14 @@ Partial Class tela_admin
         Me.Column6.MinimumWidth = 6
         Me.Column6.Name = "Column6"
         Me.Column6.ReadOnly = True
-        Me.Column6.Width = 72
+        Me.Column6.Width = 78
         '
         'tela_admin
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1270, 491)
+        Me.AutoSize = True
+        Me.ClientSize = New System.Drawing.Size(1524, 547)
         Me.Controls.Add(Me.btn_pizza)
         Me.Controls.Add(Me.btn_pedidos)
         Me.Controls.Add(Me.Label3)
@@ -248,6 +249,7 @@ Partial Class tela_admin
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btn_criar_conta)
         Me.Controls.Add(Me.dgv_usuarios)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Name = "tela_admin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "ADMINISTRADOR"

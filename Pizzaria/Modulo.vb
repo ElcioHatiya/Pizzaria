@@ -1,10 +1,10 @@
 ﻿Module Modulo
     Public db As New ADODB.Connection
     Public rs As New ADODB.Recordset
-    Public cont As Integer
+    Public cont, qtdPizza_num, valorPizza_num, subTotal, rslt, total As Double
 
 
-    Public sql, sqx, ativar, Status, aux, aux_nome, resp As String
+    Public sql, sqx, ativar, Status, aux, aux_nome, resp, login, valorPizza, qtdPizza As String
 
     'CONECTAR COM SQL-SERVER
     Sub conectar_banco()
@@ -44,14 +44,6 @@
         tela_admin.cmb_parametro.SelectedIndex = 0
     End Sub
 
-    'EXIBIR USUARIO NA LABEL (CARREGA TODAS LABELS NA TROCA DE TELA)
-    Sub mostrar_usuario()
-        tela_pedidos.lbl_login.Text = frm_login.txt_usuario.Text
-        tela_admin.lbl_usuario.Text = tela_pedidos.lbl_login.Text
-        'frm_pedido.lbl_cliente.Text = tela_pedidos.dgv_clientes.CurrentRow.Cells(1).Value
-        'frm_pedido.lbl_telefone.Text = tela_pedidos.dgv_clientes.CurrentRow.Cells(0).Value
-    End Sub
-
     'DATA-GRID-VIEW tela_pedidos
     Sub carregar_clientes()
         With tela_pedidos.dgv_clientes
@@ -84,7 +76,7 @@
         frm_usuario.txt_status.SelectedIndex = 0
     End Sub
 
-    'COMBO-BOX frm_pedido
+    'COMBO-BOX PIZZAS frm_pedido
     Sub carregar_pizzas()
         With frm_pedido.cmb_pizzas.Items
             sql = "select sabor from tb_pizza"
@@ -93,12 +85,13 @@
                 .Add(rs.Fields(0).Value)
                 rs.MoveNext()
             Loop
+            frm_pedido.cmb_pizzas.SelectedIndex = 0
         End With
     End Sub
-    'COMBO-BOX: QUANTIDADE DE PIZZAS DO FORMULÁRIO DE PEDIDOS)
+    'COMBO-BOX QUANTIDADE frm_pedido
     Sub carregar_qtd()
         With frm_pedido.cmb_qtd.Items
-            .Add("1/2")
+            .Add("0,5")
             .Add("1")
             .Add("2")
             .Add("3")
@@ -113,16 +106,23 @@
         End With
     End Sub
 
-    'DATA-GRID-VIEW DO FORMULÁRIO DE PEDIDOS
+    'DATA-GRID-VIEW frm_pedido
     Sub carregar_pedidos()
         With frm_pedido.dgv_pedido
+            total = 0
             .Rows.Clear()
             sql = "select * from tb_frm_pedido order by qtd asc "
             rs = db.Execute(sql)
             Do While rs.EOF = False
-                .Rows.Add(rs.Fields(1).Value,
-                          rs.Fields(0).Value,
-                           Nothing)
+                .Rows.Add(rs.Fields(0).Value,
+                             rs.Fields(1).Value,
+                             rs.Fields(2).Value,
+                             rs.Fields(3).Value,
+                             rs.Fields(4).Value,
+                             rs.Fields(5).Value,
+                             rs.Fields(6).Value,
+                             Nothing)
+                total = rs.Fields(4).Value + total
                 rs.MoveNext()
             Loop
         End With
@@ -146,4 +146,56 @@
             End If
         End With
     End Sub
+    'DATA-GRID-VIEW frm_pizza
+    Sub carregar_pizza()
+        With frm_pizza.dgv_pizzas
+            sql = "select * from tb_pizza order by sabor asc "
+            rs = db.Execute(sql)
+            .Rows.Clear()
+            Do While rs.EOF = False
+                .Rows.Add(rs.Fields(0).Value,
+                          rs.Fields(1).Value,
+                          Nothing)
+                rs.MoveNext()
+            Loop
+        End With
+    End Sub
+    'CALCULAR SUBTOTAL frm_pedido
+    Sub calcular_subtotal_pizza()
+        With frm_pedido
+            sql = "select * from tb_pizza where sabor = '" & .cmb_pizzas.Text & "'"
+            rs = db.Execute(sql)
+
+            rslt = rs.Fields(1).Value
+
+            valorPizza_num = Convert.ToDouble(rslt)
+            qtdPizza_num = Convert.ToDouble(frm_pedido.cmb_qtd.Text)
+
+            subTotal = valorPizza_num * qtdPizza_num
+
+        End With
+    End Sub
+    Sub carregar_andamento()
+        With tela_pedidos.dgv_pedidos_andamento
+            sql = "select * from tb_andamento order by nome asc "
+            rs = db.Execute(sql)
+            .Rows.Clear()
+            Do While rs.EOF = False
+                .Rows.Add(rs.Fields(0).Value,
+                          rs.Fields(1).Value,
+                          rs.Fields(2).Value,
+                          rs.Fields(3).Value,
+                          rs.Fields(4).Value,
+                          Nothing)
+                rs.MoveNext()
+            Loop
+        End With
+    End Sub
+    Sub verificar_campo_vlr()
+        Do While frm_pedido.lbl_total.Text = ""
+            frm_pedido.btn_emitir_pedido.Visible = False
+
+        Loop
+    End Sub
+
 End Module

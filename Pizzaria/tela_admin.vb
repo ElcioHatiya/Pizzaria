@@ -2,8 +2,8 @@
     Private Sub tela_admin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         carregar_dados()
         carregar_parametro()
-        mostrar_usuario()
         txt_busca.Select()
+        lbl_usuario.Text = login
     End Sub
 
     Private Sub btn_criar_conta_Click(sender As Object, e As EventArgs) Handles btn_criar_conta.Click

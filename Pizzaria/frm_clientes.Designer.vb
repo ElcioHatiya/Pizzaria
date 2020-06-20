@@ -42,9 +42,9 @@ Partial Class frm_clientes
         'btn_cadastrar_cliente
         '
         Me.btn_cadastrar_cliente.Font = New System.Drawing.Font("Microsoft YaHei", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_cadastrar_cliente.Location = New System.Drawing.Point(16, 419)
+        Me.btn_cadastrar_cliente.Location = New System.Drawing.Point(333, 230)
         Me.btn_cadastrar_cliente.Name = "btn_cadastrar_cliente"
-        Me.btn_cadastrar_cliente.Size = New System.Drawing.Size(294, 73)
+        Me.btn_cadastrar_cliente.Size = New System.Drawing.Size(146, 159)
         Me.btn_cadastrar_cliente.TabIndex = 29
         Me.btn_cadastrar_cliente.Text = "GRAVAR DADOS"
         Me.btn_cadastrar_cliente.UseVisualStyleBackColor = True
@@ -90,7 +90,7 @@ Partial Class frm_clientes
         Me.txt_comp.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_comp.Location = New System.Drawing.Point(12, 234)
         Me.txt_comp.Name = "txt_comp"
-        Me.txt_comp.Size = New System.Drawing.Size(146, 27)
+        Me.txt_comp.Size = New System.Drawing.Size(298, 27)
         Me.txt_comp.TabIndex = 24
         '
         'Label5
@@ -108,7 +108,7 @@ Partial Class frm_clientes
         Me.txt_endereco.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_endereco.Location = New System.Drawing.Point(13, 169)
         Me.txt_endereco.Name = "txt_endereco"
-        Me.txt_endereco.Size = New System.Drawing.Size(295, 27)
+        Me.txt_endereco.Size = New System.Drawing.Size(466, 27)
         Me.txt_endereco.TabIndex = 22
         '
         'Label4
@@ -124,17 +124,17 @@ Partial Class frm_clientes
         'txt_cep
         '
         Me.txt_cep.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_cep.Location = New System.Drawing.Point(208, 96)
+        Me.txt_cep.Location = New System.Drawing.Point(350, 96)
         Me.txt_cep.Mask = "99999-999"
         Me.txt_cep.Name = "txt_cep"
-        Me.txt_cep.Size = New System.Drawing.Size(99, 27)
+        Me.txt_cep.Size = New System.Drawing.Size(129, 27)
         Me.txt_cep.TabIndex = 20
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(205, 75)
+        Me.Label3.Location = New System.Drawing.Point(347, 75)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(42, 24)
         Me.Label3.TabIndex = 19
@@ -145,7 +145,7 @@ Partial Class frm_clientes
         Me.txt_telefone.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_telefone.Location = New System.Drawing.Point(12, 96)
         Me.txt_telefone.Name = "txt_telefone"
-        Me.txt_telefone.Size = New System.Drawing.Size(165, 27)
+        Me.txt_telefone.Size = New System.Drawing.Size(296, 27)
         Me.txt_telefone.TabIndex = 18
         '
         'Label2
@@ -163,7 +163,7 @@ Partial Class frm_clientes
         Me.txt_nome_cliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_nome_cliente.Location = New System.Drawing.Point(12, 32)
         Me.txt_nome_cliente.Name = "txt_nome_cliente"
-        Me.txt_nome_cliente.Size = New System.Drawing.Size(295, 27)
+        Me.txt_nome_cliente.Size = New System.Drawing.Size(467, 27)
         Me.txt_nome_cliente.TabIndex = 16
         '
         'Label1
@@ -180,7 +180,8 @@ Partial Class frm_clientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(330, 506)
+        Me.AutoSize = True
+        Me.ClientSize = New System.Drawing.Size(510, 436)
         Me.Controls.Add(Me.btn_cadastrar_cliente)
         Me.Controls.Add(Me.txt_cidade)
         Me.Controls.Add(Me.Label7)
@@ -197,6 +198,7 @@ Partial Class frm_clientes
         Me.Controls.Add(Me.txt_nome_cliente)
         Me.Controls.Add(Me.Label1)
         Me.Name = "frm_clientes"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "CADASTRAR CLIENTE"
         Me.ResumeLayout(False)
         Me.PerformLayout()

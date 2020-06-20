@@ -1,8 +1,9 @@
 ﻿Public Class tela_pedidos
     Private Sub tela_pedidos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        mostrar_usuario()
         carregar_clientes()
+        carregar_andamento()
         txt_busca_telefone.Select()
+        lbl_login.Text = login
     End Sub
     'BOTÃO NOVO CADASTRO
     Private Sub btn_novo_cadastro_Click(sender As Object, e As EventArgs) Handles btn_novo_cadastro.Click
@@ -97,5 +98,24 @@
                 rs.MoveNext()
             Loop
         End With
+    End Sub
+
+    Private Sub dgv_pedidos_andamento_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv_pedidos_andamento.CellContentClick
+        Try
+            With dgv_pedidos_andamento
+                aux = .CurrentRow.Cells(0).Value
+                If .CurrentRow.Cells(5).Selected = True Then
+                    'resp = MsgBox("Deseja realmente excluir ?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Atenção!")
+                    'If resp = MsgBoxResult.Yes Then
+                    sql = "delete from tb_andamento where telefone = '" & aux & "'"
+                    rs = db.Execute(sql)
+                    carregar_andamento()
+                    'MsgBox("Pedido excluído com sucesso!", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, " Aviso")
+                    'End If
+                End If
+            End With
+        Catch ex As Exception
+            MsgBox("Erro ao gravar dados!", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, "Atenção!")
+        End Try
     End Sub
 End Class

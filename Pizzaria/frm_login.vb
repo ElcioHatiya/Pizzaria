@@ -4,15 +4,18 @@
     Private Sub frm_login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         conectar_banco()
         txt_usuario.Select()
+
     End Sub
     ' BOTÃO ADMIN
     Private Sub btn_adminstrador_Click(sender As Object, e As EventArgs) Handles btn_adminstrador.Click
+        login = txt_usuario.Text
         tela_admin.Show()
         Me.Hide()
     End Sub
     ' BOTÃO LOGIN NÃO-ADMIN
     Private Sub btn_login_Click(sender As Object, e As EventArgs) Handles btn_login.Click
         ativar = "ativa"
+        login = txt_usuario.Text
         sql = " select * from tb_usuario where nome = '" & txt_usuario.Text & "'
                                             and senha = '" & txt_senha.Text & "'
                                             and status = '" & ativar & "'"
