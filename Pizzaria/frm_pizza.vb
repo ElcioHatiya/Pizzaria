@@ -29,9 +29,7 @@
                     'MsgBox("Conta excluída com sucesso!", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, " Aviso")
                     carregar_pizza()
                 End If
-
             End If
-
         Catch ex As Exception
             MsgBox("Erro ao gravar dados!", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, "Atenção!")
         End Try

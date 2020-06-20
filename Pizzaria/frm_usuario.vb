@@ -1,10 +1,12 @@
 ﻿Public Class frm_usuario
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Try
+                'verifica senha
             If txt_senha.Text <> txt_repetir.Text Then
                 MsgBox("Senhas não conferem!", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Aviso!")
                 Exit Sub
             End If
+                'verifica campos 
             If txt_nome.Text = "" Or
                txt_senha.Text = "" Or
                txt_repetir.Text = "" Or
@@ -13,7 +15,7 @@
                 Exit Sub
             End If
 
-            ' ATUALIZAR DADOS
+                 ' ATUALIZA DADOS SE EXISTIR NOME 
             sql = " select * from tb_usuario where nome = '" & txt_nome.Text & "'"
             rs = db.Execute(sql)
             If rs.EOF = False Then
@@ -44,6 +46,7 @@
         End Try
     End Sub
 
+    'VISUALIZAR SENHA
     Private Sub chk_senha_CheckedChanged(sender As Object, e As EventArgs) Handles chk_senha.CheckedChanged
         If chk_senha.Checked = True Then
             txt_senha.PasswordChar = ""

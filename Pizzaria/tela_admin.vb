@@ -6,6 +6,7 @@
         lbl_usuario.Text = login
     End Sub
 
+    'MOSTRAR frm_usuario
     Private Sub btn_criar_conta_Click(sender As Object, e As EventArgs) Handles btn_criar_conta.Click
         With frm_usuario
             .Show()
@@ -60,6 +61,7 @@
                 rs = db.Execute(sql)
                 If rs.EOF = False Then
                     frm_usuario.Show()
+                    'carrega frm_usuario com dados
                     With frm_usuario
                         .txt_nome.Text = rs.Fields(0).Value
                         .txt_email.Text = rs.Fields(4).Value
@@ -84,6 +86,7 @@
         End With
     End Sub
 
+    'BUSCA POR cmb_parametro 
     Private Sub txt_busca_TextChanged(sender As Object, e As EventArgs) Handles txt_busca.TextChanged
         With dgv_usuarios
             sql = "select * from tb_usuario where " & cmb_parametro.Text & " like '" & txt_busca.Text & "%' "
@@ -101,6 +104,7 @@
         End With
     End Sub
 
+    'EXIBE frm_login AO FECHAR FORMULÁRIO
     Private Sub tela_admin_Closed(sender As Object, e As EventArgs) Handles Me.Closed
         With frm_login
             .Show()

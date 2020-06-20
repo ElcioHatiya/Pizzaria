@@ -5,6 +5,7 @@
         txt_busca_telefone.Select()
         lbl_login.Text = login
     End Sub
+
     'BOTÃO NOVO CADASTRO
     Private Sub btn_novo_cadastro_Click(sender As Object, e As EventArgs) Handles btn_novo_cadastro.Click
         With frm_clientes
@@ -18,6 +19,7 @@
             .txt_endereco.Text = ""
         End With
     End Sub
+
     'EXIBE frm_login AO FECHAR tela_pedidos
     Private Sub tela_pedidos_Closed(sender As Object, e As EventArgs) Handles Me.Closed
         With frm_login
@@ -28,12 +30,13 @@
             .CheckBox1.Checked = False
         End With
     End Sub
+
     'BOTÕES "EDITAR" E "EXCLUIR" DO DATA-GRID-VIEW tela_clientes
     Private Sub dgv_clientes_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv_clientes.CellContentClick
         With dgv_clientes
-            aux = .CurrentRow.Cells(0).Value
-            aux_nome = .CurrentRow.Cells(1).Value
-            If .CurrentRow.Cells(4).Selected = True Then
+            aux = .CurrentRow.Cells(0).Value 'armazena telefone
+            aux_nome = .CurrentRow.Cells(1).Value 'armazena nome
+            If .CurrentRow.Cells(4).Selected = True Then  'frm_pedido
                 frm_pedido.Show()
                 carregar_pedidos()
             ElseIf .CurrentRow.Cells(5).Selected = True Then
@@ -41,6 +44,7 @@
                 rs = db.Execute(sql)
                 If rs.EOF = False Then
                     frm_clientes.Show()
+                    'CARREGA frm_clientes
                     With frm_clientes
                         .txt_telefone.Text = aux
                         .txt_nome_cliente.Text = rs.Fields(1).Value
@@ -51,7 +55,6 @@
                         .txt_endereco.Text = rs.Fields(3).Value
                     End With
                 End If
-
             ElseIf .CurrentRow.Cells(6).Selected = True Then
                 resp = MsgBox("Deseja realmente excluir" + vbNewLine &
                               "a conta de: " & aux_nome & " ?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Atenção!")
@@ -62,12 +65,10 @@
                     carregar_clientes()
                 End If
             End If
-
-
         End With
     End Sub
-    'BUSCA NOME CLIENTE
 
+    'BUSCA NOME CLIENTE
     Private Sub txt_busca_cliente_TextChanged(sender As Object, e As EventArgs) Handles txt_busca_cliente.TextChanged
         With dgv_clientes
             sql = "select * from tb_clientes where nome like '" & txt_busca_cliente.Text & "%' "
@@ -83,6 +84,7 @@
             Loop
         End With
     End Sub
+
     'BUSCA TELEFONE CLIENTE
     Private Sub txt_busca_telefone_TextChanged(sender As Object, e As EventArgs) Handles txt_busca_telefone.TextChanged
         With dgv_clientes
@@ -100,6 +102,7 @@
         End With
     End Sub
 
+    'EXCLUI ITENS DO DGV-ANDAMENTO
     Private Sub dgv_pedidos_andamento_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv_pedidos_andamento.CellContentClick
         Try
             With dgv_pedidos_andamento

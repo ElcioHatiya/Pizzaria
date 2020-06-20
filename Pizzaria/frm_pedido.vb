@@ -3,7 +3,6 @@
         carregar_pizzas()
         carregar_qtd()
         carregar_pedidos()
-        verificar_campo_vlr()
         lbl_usuario_pedido.Text = login
         lbl_cliente.Text = aux_nome
         lbl_telefone.Text = aux
@@ -13,16 +12,17 @@
         btn_cancel.Hide()
         btn_emitir_pedido.Visible = False
     End Sub
+
     'ADICIONAR PIZZA AO PEDIDO
     Private Sub btn_add_pizza_Click(sender As Object, e As EventArgs) Handles btn_add_pizza.Click
         Try
             sql = "insert into tb_frm_pedido  values ( '" & lbl_telefone.Text & "', " &
-                                                        "'" & lbl_cliente.Text & "' , " &
-                                                          "'" & cmb_pizzas.Text & "' ," &
-                                                          "'" & cmb_qtd.Text & "' ," &
-                                                         "'" & lbl_subtotal.Text & "' ," &
-                                                        "'" & lbl_dia.Text & "' ," &
-                                                        "'" & lbl_usuario_pedido.Text & "'  )"
+                                                    "'" & lbl_cliente.Text & "' , " &
+                                                    "'" & cmb_pizzas.Text & "' ," &
+                                                    "'" & cmb_qtd.Text & "' ," &
+                                                    "'" & lbl_subtotal.Text & "' ," &
+                                                    "'" & lbl_dia.Text & "' ," &
+                                                    "'" & lbl_usuario_pedido.Text & "'  )"
             db.Execute(UCase(sql))
             ' MsgBox("Item Adicionado", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, "Aviso!")
             carregar_pedidos()
@@ -37,15 +37,16 @@
             MsgBox("Erro ao gravar dados!", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, "Atenção!")
         End Try
     End Sub
+
     'EMITIR PEDIDO
     Private Sub btn_emitir_pedido_Click(sender As Object, e As EventArgs) Handles btn_emitir_pedido.Click
         Try
             sql = "insert into tb_andamento values ( '" & lbl_telefone.Text & "', " &
-                                                        "'" & lbl_cliente.Text & "' , " &
-                                                         "'" & lbl_total.Text & "' ," &
-                                                        "'" & lbl_dia.Text & "' ," &
-                                                        "'" & lbl_usuario_pedido.Text & "'  )"
-            sqx = "truncate table tb_frm_pedido "
+                                                 "'" & lbl_cliente.Text & "' , " &
+                                                 "'" & lbl_total.Text & "' ," &
+                                                 "'" & lbl_dia.Text & "' ," &
+                                                 "'" & lbl_usuario_pedido.Text & "'  )"
+            sqx = "truncate table tb_frm_pedido " 'apaga tb_frm_pedido
             db.Execute(sql)
             db.Execute(sqx)
             MsgBox("Pedido realizado com sucesso!", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, " Aviso")
@@ -55,6 +56,7 @@
             MsgBox("Erro ao gravar dados!", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, "Atenção!")
         End Try
     End Sub
+
     'EXCLUIR PIZZA DO PEDIDO
     Private Sub dgv_pedido_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv_pedido.CellContentClick
         Try
@@ -76,6 +78,7 @@
         End Try
     End Sub
 
+    'ESCONDE BOTÃO DE ADICIONAR 
     Private Sub cmb_pizzas_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb_pizzas.SelectedIndexChanged
         btn_add_pizza.Select()
         btn_add_pizza.Visible = False
@@ -90,6 +93,7 @@
         lbl_subtotal.Text = ""
     End Sub
 
+    'CALCULA SUBTOTAL PARA lbl_subtotal
     Private Sub btn_calc_Click(sender As Object, e As EventArgs) Handles btn_calc.Click
         calcular_subtotal_pizza()
         carregar_pedidos()
@@ -104,6 +108,7 @@
 
     End Sub
 
+    'BOTÃO DE CANCELAR CÁLCULO
     Private Sub btn_cancel_Click(sender As Object, e As EventArgs) Handles btn_cancel.Click
         btn_calc.Show()
         btn_add_pizza.Visible = False

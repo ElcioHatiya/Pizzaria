@@ -3,8 +3,7 @@
     'BOTÂO CADASTRAR CLIENTES
     Private Sub btn_cadastrar_cliente_Click(sender As Object, e As EventArgs) Handles btn_cadastrar_cliente.Click
         Try
-
-
+            'VALIDAÇÃO DOS CAMPOS
             If txt_bairro.Text = "" Or
                txt_cep.Text = "" Or
                txt_cidade.Text = "" Or
@@ -16,6 +15,7 @@
                 Exit Sub
             End If
 
+            'ATUALIZA SE EXISTIR TELEFONE
             sql = " select * from tb_clientes where telefone = '" & txt_telefone.Text & "'"
             rs = db.Execute(sql)
             If rs.EOF = False Then
@@ -31,6 +31,7 @@
                 Me.Hide()
                 carregar_clientes()
             Else
+                'SE NÃO HOUVER TELEFONE, GRAVA NOVO CADASTRO 
                 sql = "insert into tb_clientes values ( '" & txt_telefone.Text & "', " &
                                                        "'" & txt_nome_cliente.Text & "' , " &
                                                        "'" & txt_cep.Text & "' ," &
@@ -65,5 +66,9 @@
         Catch ex As Exception
             MsgBox("Erro ao processar consulta!", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Atenção!")
         End Try
+    End Sub
+
+    Private Sub frm_clientes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

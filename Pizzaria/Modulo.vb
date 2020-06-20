@@ -88,6 +88,7 @@
             frm_pedido.cmb_pizzas.SelectedIndex = 0
         End With
     End Sub
+
     'COMBO-BOX QUANTIDADE frm_pedido
     Sub carregar_qtd()
         With frm_pedido.cmb_qtd.Items
@@ -146,6 +147,7 @@
             End If
         End With
     End Sub
+
     'DATA-GRID-VIEW frm_pizza
     Sub carregar_pizza()
         With frm_pizza.dgv_pizzas
@@ -160,21 +162,20 @@
             Loop
         End With
     End Sub
+
     'CALCULAR SUBTOTAL frm_pedido
     Sub calcular_subtotal_pizza()
         With frm_pedido
             sql = "select * from tb_pizza where sabor = '" & .cmb_pizzas.Text & "'"
             rs = db.Execute(sql)
-
             rslt = rs.Fields(1).Value
-
             valorPizza_num = Convert.ToDouble(rslt)
             qtdPizza_num = Convert.ToDouble(frm_pedido.cmb_qtd.Text)
-
             subTotal = valorPizza_num * qtdPizza_num
-
         End With
     End Sub
+
+    'DATA-GRID-VIEW tela_pedidos
     Sub carregar_andamento()
         With tela_pedidos.dgv_pedidos_andamento
             sql = "select * from tb_andamento order by nome asc "
@@ -191,11 +192,4 @@
             Loop
         End With
     End Sub
-    Sub verificar_campo_vlr()
-        Do While frm_pedido.lbl_total.Text = ""
-            frm_pedido.btn_emitir_pedido.Visible = False
-
-        Loop
-    End Sub
-
 End Module
