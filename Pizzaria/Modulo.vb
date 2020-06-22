@@ -92,18 +92,18 @@
     'COMBO-BOX QUANTIDADE frm_pedido
     Sub carregar_qtd()
         With frm_pedido.cmb_qtd.Items
-            .Add("0,5")
-            .Add("1")
-            .Add("2")
-            .Add("3")
-            .Add("4")
-            .Add("5")
-            .Add("6")
-            .Add("7")
-            .Add("8")
-            .Add("9")
             .Add("10")
-            frm_pedido.cmb_qtd.SelectedIndex = 1
+            .Add("9")
+            .Add("8")
+            .Add("7")
+            .Add("6")
+            .Add("5")
+            .Add("4")
+            .Add("3")
+            .Add("2")
+            .Add("1")
+            .Add("0,5")
+            frm_pedido.cmb_qtd.SelectedIndex = 9
         End With
     End Sub
 
@@ -165,14 +165,12 @@
 
     'CALCULAR SUBTOTAL frm_pedido
     Sub calcular_subtotal_pizza()
-        With frm_pedido
-            sql = "select * from tb_pizza where sabor = '" & .cmb_pizzas.Text & "'"
-            rs = db.Execute(sql)
-            rslt = rs.Fields(1).Value
-            valorPizza_num = Convert.ToDouble(rslt)
-            qtdPizza_num = Convert.ToDouble(frm_pedido.cmb_qtd.Text)
-            subTotal = valorPizza_num * qtdPizza_num
-        End With
+        sql = "select * from tb_pizza where sabor = '" & frm_pedido.cmb_pizzas.Text & "'"
+        rs = db.Execute(sql)
+        rslt = rs.Fields(1).Value
+        valorPizza_num = Convert.ToDouble(rslt)
+        qtdPizza_num = Convert.ToDouble(frm_pedido.cmb_qtd.Text)
+        subTotal = valorPizza_num * qtdPizza_num
     End Sub
 
     'DATA-GRID-VIEW tela_pedidos

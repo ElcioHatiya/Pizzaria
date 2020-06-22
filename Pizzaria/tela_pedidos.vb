@@ -34,8 +34,8 @@
     'BOTÕES "EDITAR" E "EXCLUIR" DO DATA-GRID-VIEW tela_clientes
     Private Sub dgv_clientes_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv_clientes.CellContentClick
         With dgv_clientes
-            aux = .CurrentRow.Cells(0).Value 'armazena telefone
-            aux_nome = .CurrentRow.Cells(1).Value 'armazena nome
+            aux = .CurrentRow.Cells(0).Value ' telefone
+            aux_nome = .CurrentRow.Cells(1).Value ' nome
             If .CurrentRow.Cells(4).Selected = True Then  'frm_pedido
                 frm_pedido.Show()
                 carregar_pedidos()
@@ -44,7 +44,6 @@
                 rs = db.Execute(sql)
                 If rs.EOF = False Then
                     frm_clientes.Show()
-                    'CARREGA frm_clientes
                     With frm_clientes
                         .txt_telefone.Text = aux
                         .txt_nome_cliente.Text = rs.Fields(1).Value
@@ -106,15 +105,15 @@
     Private Sub dgv_pedidos_andamento_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv_pedidos_andamento.CellContentClick
         Try
             With dgv_pedidos_andamento
-                aux = .CurrentRow.Cells(0).Value
+                aux = .CurrentRow.Cells(3).Value 'carrega dia
                 If .CurrentRow.Cells(5).Selected = True Then
-                    'resp = MsgBox("Deseja realmente excluir ?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Atenção!")
-                    'If resp = MsgBoxResult.Yes Then
-                    sql = "delete from tb_andamento where telefone = '" & aux & "'"
-                    rs = db.Execute(sql)
-                    carregar_andamento()
-                    'MsgBox("Pedido excluído com sucesso!", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, " Aviso")
-                    'End If
+                    resp = MsgBox("Deseja realmente excluir ?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Atenção!")
+                    If resp = MsgBoxResult.Yes Then
+                        sql = "delete from tb_andamento where dia = '" & aux & "'"
+                        rs = db.Execute(sql)
+                        carregar_andamento()
+                        'MsgBox("Pedido excluído com sucesso!", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, " Aviso")
+                    End If
                 End If
             End With
         Catch ex As Exception

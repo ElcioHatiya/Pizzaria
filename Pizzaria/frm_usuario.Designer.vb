@@ -42,7 +42,7 @@ Partial Class frm_usuario
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(12, 181)
+        Me.Label6.Location = New System.Drawing.Point(9, 276)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(76, 27)
         Me.Label6.TabIndex = 29
@@ -51,16 +51,16 @@ Partial Class frm_usuario
         'txt_email
         '
         Me.txt_email.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_email.Location = New System.Drawing.Point(13, 211)
+        Me.txt_email.Location = New System.Drawing.Point(8, 306)
         Me.txt_email.Name = "txt_email"
-        Me.txt_email.Size = New System.Drawing.Size(334, 30)
+        Me.txt_email.Size = New System.Drawing.Size(355, 30)
         Me.txt_email.TabIndex = 28
         '
         'chk_senha
         '
         Me.chk_senha.AutoSize = True
         Me.chk_senha.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chk_senha.Location = New System.Drawing.Point(11, 149)
+        Me.chk_senha.Location = New System.Drawing.Point(18, 149)
         Me.chk_senha.Name = "chk_senha"
         Me.chk_senha.Size = New System.Drawing.Size(73, 24)
         Me.chk_senha.TabIndex = 27
@@ -71,7 +71,7 @@ Partial Class frm_usuario
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(194, 83)
+        Me.Label5.Location = New System.Drawing.Point(290, 83)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(153, 27)
         Me.Label5.TabIndex = 26
@@ -80,17 +80,17 @@ Partial Class frm_usuario
         'txt_repetir
         '
         Me.txt_repetir.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_repetir.Location = New System.Drawing.Point(199, 113)
+        Me.txt_repetir.Location = New System.Drawing.Point(281, 113)
         Me.txt_repetir.Name = "txt_repetir"
         Me.txt_repetir.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txt_repetir.Size = New System.Drawing.Size(148, 30)
+        Me.txt_repetir.Size = New System.Drawing.Size(243, 30)
         Me.txt_repetir.TabIndex = 25
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(376, 178)
+        Me.Label4.Location = New System.Drawing.Point(288, 190)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(75, 27)
         Me.Label4.TabIndex = 24
@@ -100,7 +100,7 @@ Partial Class frm_usuario
         '
         Me.txt_status.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_status.FormattingEnabled = True
-        Me.txt_status.Location = New System.Drawing.Point(376, 208)
+        Me.txt_status.Location = New System.Drawing.Point(288, 220)
         Me.txt_status.Name = "txt_status"
         Me.txt_status.Size = New System.Drawing.Size(248, 33)
         Me.txt_status.TabIndex = 23
@@ -109,26 +109,27 @@ Partial Class frm_usuario
         '
         Me.txt_perfil.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_perfil.FormattingEnabled = True
-        Me.txt_perfil.Location = New System.Drawing.Point(378, 113)
+        Me.txt_perfil.Location = New System.Drawing.Point(8, 220)
         Me.txt_perfil.Name = "txt_perfil"
         Me.txt_perfil.Size = New System.Drawing.Size(246, 33)
         Me.txt_perfil.TabIndex = 22
         '
         'Button1
         '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft YaHei", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(295, 285)
+        Me.Button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.Button1.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(388, 270)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(329, 53)
+        Me.Button1.Size = New System.Drawing.Size(136, 66)
         Me.Button1.TabIndex = 21
-        Me.Button1.Text = "Criar/Atualizar Conta"
+        Me.Button1.Text = "Gravar dados"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(376, 83)
+        Me.Label3.Location = New System.Drawing.Point(6, 190)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(150, 27)
         Me.Label3.TabIndex = 20
@@ -138,7 +139,7 @@ Partial Class frm_usuario
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(10, 83)
+        Me.Label2.Location = New System.Drawing.Point(11, 83)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(74, 27)
         Me.Label2.TabIndex = 19
@@ -150,7 +151,7 @@ Partial Class frm_usuario
         Me.txt_senha.Location = New System.Drawing.Point(11, 113)
         Me.txt_senha.Name = "txt_senha"
         Me.txt_senha.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txt_senha.Size = New System.Drawing.Size(149, 30)
+        Me.txt_senha.Size = New System.Drawing.Size(243, 30)
         Me.txt_senha.TabIndex = 18
         '
         'Label1
@@ -168,16 +169,15 @@ Partial Class frm_usuario
         Me.txt_nome.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_nome.Location = New System.Drawing.Point(12, 46)
         Me.txt_nome.Name = "txt_nome"
-        Me.txt_nome.Size = New System.Drawing.Size(581, 30)
+        Me.txt_nome.Size = New System.Drawing.Size(526, 30)
         Me.txt_nome.TabIndex = 16
         '
         'frm_usuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.AutoSize = True
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.ClientSize = New System.Drawing.Size(650, 373)
+        Me.ClientSize = New System.Drawing.Size(576, 374)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.txt_email)
         Me.Controls.Add(Me.chk_senha)

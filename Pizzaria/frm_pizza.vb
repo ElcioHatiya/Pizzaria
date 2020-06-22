@@ -20,13 +20,13 @@
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv_pizzas.CellContentClick
         Try
-            aux_nome = dgv_pizzas.CurrentRow.Cells(0).Value
+            aux_nome = dgv_pizzas.CurrentRow.Cells(0).Value 'carrega sabor
             If dgv_pizzas.CurrentRow.Cells(2).Selected = True Then
                 resp = MsgBox("Deseja realmente excluir?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Atenção!")
                 If resp = MsgBoxResult.Yes Then
                     sql = "delete from tb_pizza where sabor = '" & aux_nome & "'"
                     rs = db.Execute(sql)
-                    'MsgBox("Conta excluída com sucesso!", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, " Aviso")
+                    'MsgBox("Excluída com sucesso!", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, " Aviso")
                     carregar_pizza()
                 End If
             End If

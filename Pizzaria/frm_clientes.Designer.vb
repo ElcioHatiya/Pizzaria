@@ -41,13 +41,14 @@ Partial Class frm_clientes
         '
         'btn_cadastrar_cliente
         '
+        Me.btn_cadastrar_cliente.BackColor = System.Drawing.SystemColors.ButtonShadow
         Me.btn_cadastrar_cliente.Font = New System.Drawing.Font("Microsoft YaHei", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_cadastrar_cliente.Location = New System.Drawing.Point(333, 230)
+        Me.btn_cadastrar_cliente.Location = New System.Drawing.Point(331, 234)
         Me.btn_cadastrar_cliente.Name = "btn_cadastrar_cliente"
-        Me.btn_cadastrar_cliente.Size = New System.Drawing.Size(146, 159)
+        Me.btn_cadastrar_cliente.Size = New System.Drawing.Size(148, 155)
         Me.btn_cadastrar_cliente.TabIndex = 29
-        Me.btn_cadastrar_cliente.Text = "GRAVAR DADOS"
-        Me.btn_cadastrar_cliente.UseVisualStyleBackColor = True
+        Me.btn_cadastrar_cliente.Text = "Gravar dados"
+        Me.btn_cadastrar_cliente.UseVisualStyleBackColor = False
         '
         'txt_cidade
         '
@@ -181,7 +182,7 @@ Partial Class frm_clientes
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
-        Me.ClientSize = New System.Drawing.Size(510, 436)
+        Me.ClientSize = New System.Drawing.Size(493, 408)
         Me.Controls.Add(Me.btn_cadastrar_cliente)
         Me.Controls.Add(Me.txt_cidade)
         Me.Controls.Add(Me.Label7)
@@ -199,7 +200,7 @@ Partial Class frm_clientes
         Me.Controls.Add(Me.Label1)
         Me.Name = "frm_clientes"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "CADASTRAR CLIENTE"
+        Me.Text = "CLIENTE"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

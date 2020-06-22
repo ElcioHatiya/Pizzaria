@@ -47,7 +47,7 @@ Partial Class frm_pizza
         Me.dgv_pizzas.ReadOnly = True
         Me.dgv_pizzas.RowHeadersWidth = 51
         Me.dgv_pizzas.RowTemplate.Height = 24
-        Me.dgv_pizzas.Size = New System.Drawing.Size(665, 298)
+        Me.dgv_pizzas.Size = New System.Drawing.Size(412, 298)
         Me.dgv_pizzas.TabIndex = 9
         '
         'Column1
@@ -127,7 +127,7 @@ Partial Class frm_pizza
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
-        Me.ClientSize = New System.Drawing.Size(753, 528)
+        Me.ClientSize = New System.Drawing.Size(457, 493)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.txt_valor)
         Me.Controls.Add(Me.dgv_pizzas)

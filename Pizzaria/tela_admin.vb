@@ -19,7 +19,7 @@
 
     Private Sub dgv_usuarios_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv_usuarios.CellContentClick
         With dgv_usuarios
-            aux = .CurrentRow.Cells(0).Value
+            aux = .CurrentRow.Cells(0).Value 'carrega nome
 
             ' BLOQUEAR CONTA 
             If .CurrentRow.Cells(5).Selected = True Then

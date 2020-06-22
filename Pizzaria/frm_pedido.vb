@@ -61,11 +61,11 @@
     Private Sub dgv_pedido_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv_pedido.CellContentClick
         Try
             With dgv_pedido
-                aux = .CurrentRow.Cells(1).Value
+                aux = .CurrentRow.Cells(5).Value 'carrega dia
                 If .CurrentRow.Cells(7).Selected = True Then
                     'resp = MsgBox("Deseja realmente excluir ?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Atenção!")
                     'If resp = MsgBoxResult.Yes Then
-                    sql = "delete from tb_frm_pedido where nome = '" & aux & "'"
+                    sql = "delete from tb_frm_pedido where dia = '" & aux & "'"
                     rs = db.Execute(sql)
                     'MsgBox("Pizza excluída", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, " Aviso")
                     carregar_pedidos()
