@@ -5,7 +5,7 @@
     Public pedido, pedidotemp, pedidoaux, cont As Integer
 
 
-    Public sql, sqx, sqy, ativar, Status, aux, aux_nome, resp, login, valorPizza, qtdPizza, saborAux, qtdAux, valorAux As String
+    Public sql, sqx, sqy, ativar, Status, aux, aux_nome, resp, login, valorPizza, qtdPizza, saborAux, qtdAux, valorAux, AuxPedido As String
 
     'CONECTAR COM SQL-SERVER
     Sub conectar_banco()
@@ -197,8 +197,5 @@
             Loop
             pedido = pedidoaux + 1
         End With
-    End Sub
-    Sub gravar_pedido()
-
     End Sub
 End Module

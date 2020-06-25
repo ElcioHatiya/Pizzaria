@@ -115,7 +115,13 @@
                         'MsgBox("Pedido excluído com sucesso!", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, " Aviso")
                     End If
                 End If
+
+                If .CurrentRow.Cells(7).Selected = True Then
+                    AuxPedido = .CurrentRow.Cells(0).Value
+                    frm_Relatorio.Show()
+                End If
             End With
+
         Catch ex As Exception
             MsgBox("Erro ao gravar dados!", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, "Atenção!")
         End Try
