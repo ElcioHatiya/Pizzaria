@@ -17,21 +17,21 @@
     ' BOTÃO LOGIN NÃO-ADMIN
     Private Sub btn_login_Click(sender As Object, e As EventArgs) Handles btn_login.Click
         ativar = "ativa"
-        login = txt_usuario.Text
+        login = txt_usuario.Text 'carrega nome p prox label
         'CONFERE NOME, SENHA E STATUS
         sql = " select * from tb_usuario where nome = '" & txt_usuario.Text & "'
-                                            and senha = '" & txt_senha.Text & "'
+                                            And senha = '" & txt_senha.Text & "'
                                             and status = '" & ativar & "'"
-        rs = db.Execute(sql)
-        If rs.EOF = False Then
-            tela_pedidos.Show()
+        ' rs = db.Execute(sql)
+        ' If rs.EOF = False Then
+        tela_pedidos.Show()
             Me.Hide()
-        Else
-            MsgBox("Dados inválidos!", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Aviso!")
-            txt_senha.Clear()
+        ' Else
+        ' MsgBox("Dados inválidos!", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Aviso!")
+        txt_senha.Clear()
             txt_usuario.Clear()
             txt_usuario.Select()
-        End If
+        'End If
     End Sub
 
     'SENHA ADMIN

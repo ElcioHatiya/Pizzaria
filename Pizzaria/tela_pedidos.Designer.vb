@@ -39,14 +39,16 @@ Partial Class tela_pedidos
         Me.Column6 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.txt_busca_telefone = New System.Windows.Forms.TextBox()
         Me.dgv_pedidos_andamento = New System.Windows.Forms.DataGridView()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column16 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.Column11 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
         CType(Me.dgv_clientes, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgv_pedidos_andamento, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -75,7 +77,7 @@ Partial Class tela_pedidos
         '
         Me.btn_novo_cadastro.AutoSize = True
         Me.btn_novo_cadastro.Font = New System.Drawing.Font("Microsoft YaHei", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_novo_cadastro.Location = New System.Drawing.Point(462, 536)
+        Me.btn_novo_cadastro.Location = New System.Drawing.Point(493, 680)
         Me.btn_novo_cadastro.Name = "btn_novo_cadastro"
         Me.btn_novo_cadastro.Size = New System.Drawing.Size(245, 77)
         Me.btn_novo_cadastro.TabIndex = 15
@@ -85,7 +87,7 @@ Partial Class tela_pedidos
         'txt_busca_cliente
         '
         Me.txt_busca_cliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_busca_cliente.Location = New System.Drawing.Point(134, 583)
+        Me.txt_busca_cliente.Location = New System.Drawing.Point(165, 727)
         Me.txt_busca_cliente.Name = "txt_busca_cliente"
         Me.txt_busca_cliente.Size = New System.Drawing.Size(295, 30)
         Me.txt_busca_cliente.TabIndex = 14
@@ -94,7 +96,7 @@ Partial Class tela_pedidos
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(39, 536)
+        Me.Label3.Location = New System.Drawing.Point(70, 680)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(125, 27)
         Me.Label3.TabIndex = 13
@@ -104,7 +106,7 @@ Partial Class tela_pedidos
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(39, 585)
+        Me.Label2.Location = New System.Drawing.Point(70, 729)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(89, 27)
         Me.Label2.TabIndex = 12
@@ -117,12 +119,12 @@ Partial Class tela_pedidos
         Me.dgv_clientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.dgv_clientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgv_clientes.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column7, Me.Column6})
-        Me.dgv_clientes.Location = New System.Drawing.Point(33, 307)
+        Me.dgv_clientes.Location = New System.Drawing.Point(33, 375)
         Me.dgv_clientes.Name = "dgv_clientes"
         Me.dgv_clientes.ReadOnly = True
         Me.dgv_clientes.RowHeadersWidth = 51
         Me.dgv_clientes.RowTemplate.Height = 24
-        Me.dgv_clientes.Size = New System.Drawing.Size(693, 203)
+        Me.dgv_clientes.Size = New System.Drawing.Size(836, 282)
         Me.dgv_clientes.TabIndex = 11
         '
         'Column1
@@ -187,7 +189,7 @@ Partial Class tela_pedidos
         'txt_busca_telefone
         '
         Me.txt_busca_telefone.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_busca_telefone.Location = New System.Drawing.Point(170, 533)
+        Me.txt_busca_telefone.Location = New System.Drawing.Point(201, 677)
         Me.txt_busca_telefone.Name = "txt_busca_telefone"
         Me.txt_busca_telefone.Size = New System.Drawing.Size(260, 34)
         Me.txt_busca_telefone.TabIndex = 19
@@ -198,34 +200,22 @@ Partial Class tela_pedidos
         Me.dgv_pedidos_andamento.AllowUserToDeleteRows = False
         Me.dgv_pedidos_andamento.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.dgv_pedidos_andamento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgv_pedidos_andamento.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column9, Me.Column10, Me.Column12, Me.Column13, Me.Column15, Me.Column16})
+        Me.dgv_pedidos_andamento.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column8, Me.Column9, Me.Column10, Me.Column12, Me.Column13, Me.Column15, Me.Column16, Me.Column11})
         Me.dgv_pedidos_andamento.Location = New System.Drawing.Point(33, 60)
         Me.dgv_pedidos_andamento.Name = "dgv_pedidos_andamento"
         Me.dgv_pedidos_andamento.ReadOnly = True
         Me.dgv_pedidos_andamento.RowHeadersWidth = 51
         Me.dgv_pedidos_andamento.RowTemplate.Height = 24
-        Me.dgv_pedidos_andamento.Size = New System.Drawing.Size(693, 179)
+        Me.dgv_pedidos_andamento.Size = New System.Drawing.Size(826, 256)
         Me.dgv_pedidos_andamento.TabIndex = 20
         '
-        'Label1
+        'Column8
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(29, 280)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(91, 24)
-        Me.Label1.TabIndex = 21
-        Me.Label1.Text = "CLIENTES"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(29, 19)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(243, 24)
-        Me.Label5.TabIndex = 22
-        Me.Label5.Text = "PEDIDOS EM ANDAMENTO"
+        Me.Column8.HeaderText = "PEDIDO"
+        Me.Column8.MinimumWidth = 6
+        Me.Column8.Name = "Column8"
+        Me.Column8.ReadOnly = True
+        Me.Column8.Width = 93
         '
         'Column9
         '
@@ -237,11 +227,11 @@ Partial Class tela_pedidos
         '
         'Column10
         '
-        Me.Column10.HeaderText = "NOME"
+        Me.Column10.HeaderText = "CLIENTE"
         Me.Column10.MinimumWidth = 6
         Me.Column10.Name = "Column10"
         Me.Column10.ReadOnly = True
-        Me.Column10.Width = 83
+        Me.Column10.Width = 97
         '
         'Column12
         '
@@ -276,12 +266,43 @@ Partial Class tela_pedidos
         Me.Column16.ReadOnly = True
         Me.Column16.Width = 76
         '
+        'Column11
+        '
+        Me.Column11.HeaderText = "DETALHES"
+        Me.Column11.MinimumWidth = 6
+        Me.Column11.Name = "Column11"
+        Me.Column11.ReadOnly = True
+        Me.Column11.Width = 90
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Label1.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(39, 331)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(91, 24)
+        Me.Label1.TabIndex = 21
+        Me.Label1.Text = "CLIENTES"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Label5.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(29, 19)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(243, 24)
+        Me.Label5.TabIndex = 22
+        Me.Label5.Text = "PEDIDOS EM ANDAMENTO"
+        '
         'tela_pedidos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 19.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
-        Me.ClientSize = New System.Drawing.Size(753, 645)
+        Me.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.ClientSize = New System.Drawing.Size(962, 786)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.dgv_pedidos_andamento)
@@ -321,10 +342,12 @@ Partial Class tela_pedidos
     Friend WithEvents Column6 As DataGridViewImageColumn
     Friend WithEvents Label1 As Label
     Friend WithEvents Label5 As Label
+    Friend WithEvents Column8 As DataGridViewTextBoxColumn
     Friend WithEvents Column9 As DataGridViewTextBoxColumn
     Friend WithEvents Column10 As DataGridViewTextBoxColumn
     Friend WithEvents Column12 As DataGridViewTextBoxColumn
     Friend WithEvents Column13 As DataGridViewTextBoxColumn
     Friend WithEvents Column15 As DataGridViewTextBoxColumn
     Friend WithEvents Column16 As DataGridViewImageColumn
+    Friend WithEvents Column11 As DataGridViewImageColumn
 End Class

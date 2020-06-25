@@ -11,6 +11,7 @@
         lbl_subtotal.Visible = False
         btn_cancel.Hide()
         btn_emitir_pedido.Visible = False
+        lbl_Pedido.Text = pedido
     End Sub
 
     'ADICIONAR PIZZA AO PEDIDO
@@ -45,9 +46,29 @@
                                                  "'" & lbl_cliente.Text & "' , " &
                                                  "'" & lbl_total.Text & "' ," &
                                                  "'" & lbl_dia.Text & "' ," &
-                                                 "'" & lbl_usuario_pedido.Text & "'  )"
-            sqx = "truncate table tb_frm_pedido " 'apaga tb_frm_pedido
+                                                 "'" & lbl_usuario_pedido.Text & "'," &
+                                                 "'" & lbl_Pedido.Text & "')"
             db.Execute(sql)
+            With dgv_pedido
+                sql = "select * from tb_frm_pedido where telefone = '" & lbl_telefone.Text & "'"
+                rs = db.Execute(sql)
+                Do While rs.EOF = False
+                    saborAux = rs.Fields(2).Value
+                    qtdAux = rs.Fields(3).Value
+                    valorAux = rs.Fields(4).Value
+                    rs.MoveNext()
+                    sqy = "insert into tb_frm_pedido_registro values ( '" & lbl_Pedido.Text & "', " &
+                                                                        "'" & lbl_telefone.Text & "'," &
+                                                                        "'" & lbl_cliente.Text & "'," &
+                                                                        "'" & saborAux & "'," &
+                                                                        "'" & qtdAux & "', " &
+                                                                        "'" & valorAux & "', " &
+                                                                        "'" & lbl_dia.Text & "', " &
+                                                                        "'" & lbl_usuario_pedido.Text & "')"
+                    db.Execute(sqy)
+                Loop
+            End With
+            sqx = "truncate table tb_frm_pedido " 'apaga tb_frm_pedido
             db.Execute(sqx)
             MsgBox("Pedido realizado com sucesso!", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, " Aviso")
             carregar_andamento()

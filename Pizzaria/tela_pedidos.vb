@@ -105,8 +105,8 @@
     Private Sub dgv_pedidos_andamento_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv_pedidos_andamento.CellContentClick
         Try
             With dgv_pedidos_andamento
-                aux = .CurrentRow.Cells(3).Value 'carrega dia
-                If .CurrentRow.Cells(5).Selected = True Then
+                aux = .CurrentRow.Cells(4).Value 'carrega dia
+                If .CurrentRow.Cells(6).Selected = True Then
                     resp = MsgBox("Deseja realmente excluir ?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Atenção!")
                     If resp = MsgBoxResult.Yes Then
                         sql = "delete from tb_andamento where dia = '" & aux & "'"

@@ -49,6 +49,8 @@ Partial Class frm_pedido
         Me.btn_cancel = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.lbl_Pedido = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         CType(Me.dgv_pedido, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -93,7 +95,7 @@ Partial Class frm_pedido
         Me.dgv_pedido.ReadOnly = True
         Me.dgv_pedido.RowHeadersWidth = 51
         Me.dgv_pedido.RowTemplate.Height = 24
-        Me.dgv_pedido.Size = New System.Drawing.Size(803, 191)
+        Me.dgv_pedido.Size = New System.Drawing.Size(803, 351)
         Me.dgv_pedido.TabIndex = 17
         '
         'Column1
@@ -165,7 +167,7 @@ Partial Class frm_pedido
         '
         Me.btn_emitir_pedido.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.btn_emitir_pedido.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_emitir_pedido.Location = New System.Drawing.Point(727, 240)
+        Me.btn_emitir_pedido.Location = New System.Drawing.Point(736, 400)
         Me.btn_emitir_pedido.Name = "btn_emitir_pedido"
         Me.btn_emitir_pedido.Size = New System.Drawing.Size(88, 70)
         Me.btn_emitir_pedido.TabIndex = 16
@@ -176,7 +178,7 @@ Partial Class frm_pedido
         '
         Me.cmb_qtd.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmb_qtd.FormattingEnabled = True
-        Me.cmb_qtd.Location = New System.Drawing.Point(443, 278)
+        Me.cmb_qtd.Location = New System.Drawing.Point(452, 438)
         Me.cmb_qtd.Name = "cmb_qtd"
         Me.cmb_qtd.Size = New System.Drawing.Size(78, 32)
         Me.cmb_qtd.TabIndex = 15
@@ -186,7 +188,7 @@ Partial Class frm_pedido
         Me.btn_add_pizza.AutoSize = True
         Me.btn_add_pizza.BackColor = System.Drawing.SystemColors.AppWorkspace
         Me.btn_add_pizza.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_add_pizza.Location = New System.Drawing.Point(592, 240)
+        Me.btn_add_pizza.Location = New System.Drawing.Point(601, 400)
         Me.btn_add_pizza.Name = "btn_add_pizza"
         Me.btn_add_pizza.Size = New System.Drawing.Size(129, 70)
         Me.btn_add_pizza.TabIndex = 14
@@ -198,7 +200,7 @@ Partial Class frm_pedido
         '
         Me.cmb_pizzas.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmb_pizzas.FormattingEnabled = True
-        Me.cmb_pizzas.Location = New System.Drawing.Point(280, 240)
+        Me.cmb_pizzas.Location = New System.Drawing.Point(289, 400)
         Me.cmb_pizzas.Name = "cmb_pizzas"
         Me.cmb_pizzas.Size = New System.Drawing.Size(241, 32)
         Me.cmb_pizzas.TabIndex = 13
@@ -236,7 +238,7 @@ Partial Class frm_pedido
         '
         Me.lbl_subtotal.AutoSize = True
         Me.lbl_subtotal.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_subtotal.Location = New System.Drawing.Point(334, 283)
+        Me.lbl_subtotal.Location = New System.Drawing.Point(343, 443)
         Me.lbl_subtotal.Name = "lbl_subtotal"
         Me.lbl_subtotal.Size = New System.Drawing.Size(103, 27)
         Me.lbl_subtotal.TabIndex = 27
@@ -248,9 +250,9 @@ Partial Class frm_pedido
         Me.lbl_dia.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_dia.Location = New System.Drawing.Point(554, 156)
         Me.lbl_dia.Name = "lbl_dia"
-        Me.lbl_dia.Size = New System.Drawing.Size(91, 27)
+        Me.lbl_dia.Size = New System.Drawing.Size(205, 27)
         Me.lbl_dia.TabIndex = 28
-        Me.lbl_dia.Text = "lbl_data"
+        Me.lbl_dia.Text = "lbl_data não visível"
         Me.lbl_dia.Visible = False
         '
         'btn_calc
@@ -258,7 +260,7 @@ Partial Class frm_pedido
         Me.btn_calc.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.btn_calc.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_calc.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btn_calc.Location = New System.Drawing.Point(592, 240)
+        Me.btn_calc.Location = New System.Drawing.Point(601, 400)
         Me.btn_calc.Name = "btn_calc"
         Me.btn_calc.Size = New System.Drawing.Size(129, 70)
         Me.btn_calc.TabIndex = 29
@@ -269,7 +271,7 @@ Partial Class frm_pedido
         '
         Me.lbl_total.AutoSize = True
         Me.lbl_total.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_total.Location = New System.Drawing.Point(93, 272)
+        Me.lbl_total.Location = New System.Drawing.Point(102, 432)
         Me.lbl_total.Name = "lbl_total"
         Me.lbl_total.Size = New System.Drawing.Size(64, 27)
         Me.lbl_total.TabIndex = 31
@@ -279,7 +281,7 @@ Partial Class frm_pedido
         '
         Me.btn_cancel.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.btn_cancel.Image = CType(resources.GetObject("btn_cancel.Image"), System.Drawing.Image)
-        Me.btn_cancel.Location = New System.Drawing.Point(527, 240)
+        Me.btn_cancel.Location = New System.Drawing.Point(536, 400)
         Me.btn_cancel.Name = "btn_cancel"
         Me.btn_cancel.Size = New System.Drawing.Size(59, 70)
         Me.btn_cancel.TabIndex = 32
@@ -289,7 +291,7 @@ Partial Class frm_pedido
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(93, 245)
+        Me.Label7.Location = New System.Drawing.Point(102, 405)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(64, 27)
         Me.Label7.TabIndex = 30
@@ -299,16 +301,36 @@ Partial Class frm_pedido
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(274, 283)
+        Me.Label6.Location = New System.Drawing.Point(283, 443)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(63, 27)
         Me.Label6.TabIndex = 26
         Me.Label6.Text = "Valor"
         '
+        'lbl_Pedido
+        '
+        Me.lbl_Pedido.AutoSize = True
+        Me.lbl_Pedido.Location = New System.Drawing.Point(22, 440)
+        Me.lbl_Pedido.Name = "lbl_Pedido"
+        Me.lbl_Pedido.Size = New System.Drawing.Size(57, 19)
+        Me.lbl_Pedido.TabIndex = 33
+        Me.lbl_Pedido.Text = "pedido"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(22, 420)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(67, 19)
+        Me.Label3.TabIndex = 34
+        Me.Label3.Text = "Número"
+        '
         'frm_pedido
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
-        Me.ClientSize = New System.Drawing.Size(822, 314)
+        Me.ClientSize = New System.Drawing.Size(842, 495)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.lbl_Pedido)
         Me.Controls.Add(Me.btn_cancel)
         Me.Controls.Add(Me.lbl_total)
         Me.Controls.Add(Me.Label7)
@@ -362,4 +384,6 @@ Partial Class frm_pedido
     Friend WithEvents btn_cancel As Button
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
+    Friend WithEvents lbl_Pedido As Label
+    Friend WithEvents Label3 As Label
 End Class
