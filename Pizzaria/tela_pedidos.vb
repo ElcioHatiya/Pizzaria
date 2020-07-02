@@ -118,12 +118,33 @@
 
                 If .CurrentRow.Cells(7).Selected = True Then
                     AuxPedido = .CurrentRow.Cells(0).Value
-                    frm_Relatorio.Show()
                 End If
             End With
 
         Catch ex As Exception
             MsgBox("Erro ao gravar dados!", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, "Atenção!")
         End Try
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        With dgv_pedidos_andamento
+            sql = "select * from tb_andamento where pedido like '" & txt_busca_pedido.Text & "%' "
+            rs = db.Execute(sql)
+            .Rows.Clear()
+            Do While rs.EOF = False
+                .Rows.Add(rs.Fields(5).Value,
+                              rs.Fields(0).Value,
+                              rs.Fields(1).Value,
+                              rs.Fields(2).Value,
+                              rs.Fields(3).Value,
+                              rs.Fields(4).Value,
+                              Nothing)
+                rs.MoveNext()
+            Loop
+        End With
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        carregar_andamento()
     End Sub
 End Class

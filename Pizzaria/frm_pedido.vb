@@ -105,6 +105,7 @@
         btn_add_pizza.Visible = False
         btn_cancel.Visible = False
         lbl_subtotal.Text = ""
+        cmb_qtd.SelectedIndex = 9
     End Sub
 
     Private Sub cmb_qtd_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb_qtd.SelectedIndexChanged

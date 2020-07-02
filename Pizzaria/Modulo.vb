@@ -11,7 +11,7 @@
     Sub conectar_banco()
         Try
             db = CreateObject("ADODB.connection")
-            db.Open("Provider = SQLOLEDB;Data Source= LAPTOP-F9R7ORS0; Initial Catalog = pizzaria; trusted_connection=yes;")
+            db.Open("Provider = SQLOLEDB;Data Source= LAPTOP-T0D0DM3D; Initial Catalog = pizzaria; trusted_connection=yes;")
             '  MsgBox("Conexão bem sucedida!", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, "Aviso")
         Catch ex As Exception
             MsgBox("Erro ao conectar com o banco", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Aviso")
@@ -79,32 +79,36 @@
 
     'COMBO-BOX PIZZAS frm_pedido
     Sub carregar_pizzas()
-        With frm_pedido.cmb_pizzas.Items
-            sql = "select sabor from tb_pizza"
-            rs = db.Execute(sql)
-            Do While rs.EOF = False
-                .Add(rs.Fields(0).Value)
-                rs.MoveNext()
-            Loop
-            frm_pedido.cmb_pizzas.SelectedIndex = 0
-        End With
+        Try
+            With frm_pedido.cmb_pizzas.Items
+                sql = "select sabor from tb_pizza"
+                rs = db.Execute(sql)
+                Do While rs.EOF = False
+                    .Add(rs.Fields(0).Value)
+                    rs.MoveNext()
+                Loop
+                frm_pedido.cmb_pizzas.SelectedIndex = 0
+            End With
+        Catch ex As Exception
+            ' MsgBox("Cadastre uma pizza /Somente adimnistrador")
+        End Try
     End Sub
 
     'COMBO-BOX QUANTIDADE frm_pedido
     Sub carregar_qtd()
         With frm_pedido.cmb_qtd.Items
-            .Add("0,5")
-            .Add("1")
-            .Add("2")
-            .Add("3")
-            .Add("4")
-            .Add("5")
-            .Add("6")
-            .Add("7")
-            .Add("8")
-            .Add("9")
             .Add("10")
-            frm_pedido.cmb_qtd.SelectedIndex = 1
+            .Add("9")
+            .Add("8")
+            .Add("7")
+            .Add("6")
+            .Add("5")
+            .Add("4")
+            .Add("3")
+            .Add("2")
+            .Add("1")
+            .Add("0,5")
+            frm_pedido.cmb_qtd.SelectedIndex = 9
         End With
     End Sub
 
@@ -176,26 +180,30 @@
 
     'DATA-GRID-VIEW tela_pedidos Em Andamento
     Sub carregar_andamento()
-        With tela_pedidos.dgv_pedidos_andamento
-            sql = "select * from tb_andamento order by pedido asc "
-            rs = db.Execute(sql)
-            .Rows.Clear()
-            pedidoaux = rs.Fields(5).Value
-            Do While rs.EOF = False
-                .Rows.Add(rs.Fields(5).Value,
-                          rs.Fields(0).Value,
-                          rs.Fields(1).Value,
-                          rs.Fields(2).Value,
-                          rs.Fields(3).Value,
-                          rs.Fields(4).Value,
-                          Nothing)
-                pedidotemp = rs.Fields(5).Value
-                rs.MoveNext()
-                If pedidotemp > pedidoaux Then
-                    pedidoaux = pedidotemp
-                End If
-            Loop
-            pedido = pedidoaux + 1
-        End With
+        Try
+            With tela_pedidos.dgv_pedidos_andamento
+                sql = "select * from tb_andamento order by pedido asc "
+                rs = db.Execute(sql)
+                .Rows.Clear()
+                pedidoaux = rs.Fields(5).Value
+                Do While rs.EOF = False
+                    .Rows.Add(rs.Fields(5).Value,
+                              rs.Fields(0).Value,
+                              rs.Fields(1).Value,
+                              rs.Fields(2).Value,
+                              rs.Fields(3).Value,
+                              rs.Fields(4).Value,
+                              Nothing)
+                    pedidotemp = rs.Fields(5).Value
+                    rs.MoveNext()
+                    If pedidotemp > pedidoaux Then
+                        pedidoaux = pedidotemp
+                    End If
+                Loop
+                pedido = pedidoaux + 1
+            End With
+        Catch ex As Exception
+            ' MsgBox("Sem pedidos no momento")
+        End Try
     End Sub
 End Module

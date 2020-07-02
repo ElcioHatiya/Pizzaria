@@ -51,6 +51,7 @@ Partial Class frm_pedido
         Me.Label6 = New System.Windows.Forms.Label()
         Me.lbl_Pedido = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         CType(Me.dgv_pedido, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -60,7 +61,7 @@ Partial Class frm_pedido
         Me.Label2.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(12, 8)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(119, 27)
+        Me.Label2.Size = New System.Drawing.Size(97, 22)
         Me.Label2.TabIndex = 20
         Me.Label2.Text = "TELEFONE:"
         '
@@ -70,7 +71,7 @@ Partial Class frm_pedido
         Me.Label1.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(346, 8)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(101, 27)
+        Me.Label1.Size = New System.Drawing.Size(82, 22)
         Me.Label1.TabIndex = 19
         Me.Label1.Text = "CLIENTE:"
         '
@@ -90,12 +91,12 @@ Partial Class frm_pedido
         Me.dgv_pedido.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.dgv_pedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgv_pedido.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column9, Me.Column3, Me.Column4, Me.Column5, Me.Column7, Me.Column8})
-        Me.dgv_pedido.Location = New System.Drawing.Point(12, 43)
+        Me.dgv_pedido.Location = New System.Drawing.Point(16, 43)
         Me.dgv_pedido.Name = "dgv_pedido"
         Me.dgv_pedido.ReadOnly = True
         Me.dgv_pedido.RowHeadersWidth = 51
         Me.dgv_pedido.RowTemplate.Height = 24
-        Me.dgv_pedido.Size = New System.Drawing.Size(803, 351)
+        Me.dgv_pedido.Size = New System.Drawing.Size(803, 337)
         Me.dgv_pedido.TabIndex = 17
         '
         'Column1
@@ -104,7 +105,7 @@ Partial Class frm_pedido
         Me.Column1.MinimumWidth = 6
         Me.Column1.Name = "Column1"
         Me.Column1.ReadOnly = True
-        Me.Column1.Width = 110
+        Me.Column1.Width = 88
         '
         'Column2
         '
@@ -112,7 +113,7 @@ Partial Class frm_pedido
         Me.Column2.MinimumWidth = 6
         Me.Column2.Name = "Column2"
         Me.Column2.ReadOnly = True
-        Me.Column2.Width = 83
+        Me.Column2.Width = 68
         '
         'Column9
         '
@@ -120,7 +121,7 @@ Partial Class frm_pedido
         Me.Column9.MinimumWidth = 6
         Me.Column9.Name = "Column9"
         Me.Column9.ReadOnly = True
-        Me.Column9.Width = 81
+        Me.Column9.Width = 66
         '
         'Column3
         '
@@ -128,7 +129,7 @@ Partial Class frm_pedido
         Me.Column3.MinimumWidth = 6
         Me.Column3.Name = "Column3"
         Me.Column3.ReadOnly = True
-        Me.Column3.Width = 138
+        Me.Column3.Width = 111
         '
         'Column4
         '
@@ -136,7 +137,7 @@ Partial Class frm_pedido
         Me.Column4.MinimumWidth = 6
         Me.Column4.Name = "Column4"
         Me.Column4.ReadOnly = True
-        Me.Column4.Width = 88
+        Me.Column4.Width = 72
         '
         'Column5
         '
@@ -144,7 +145,7 @@ Partial Class frm_pedido
         Me.Column5.MinimumWidth = 6
         Me.Column5.Name = "Column5"
         Me.Column5.ReadOnly = True
-        Me.Column5.Width = 80
+        Me.Column5.Width = 65
         '
         'Column7
         '
@@ -152,7 +153,7 @@ Partial Class frm_pedido
         Me.Column7.MinimumWidth = 6
         Me.Column7.Name = "Column7"
         Me.Column7.ReadOnly = True
-        Me.Column7.Width = 105
+        Me.Column7.Width = 87
         '
         'Column8
         '
@@ -161,7 +162,7 @@ Partial Class frm_pedido
         Me.Column8.MinimumWidth = 6
         Me.Column8.Name = "Column8"
         Me.Column8.ReadOnly = True
-        Me.Column8.Width = 76
+        Me.Column8.Width = 62
         '
         'btn_emitir_pedido
         '
@@ -180,7 +181,7 @@ Partial Class frm_pedido
         Me.cmb_qtd.FormattingEnabled = True
         Me.cmb_qtd.Location = New System.Drawing.Point(452, 438)
         Me.cmb_qtd.Name = "cmb_qtd"
-        Me.cmb_qtd.Size = New System.Drawing.Size(78, 32)
+        Me.cmb_qtd.Size = New System.Drawing.Size(78, 27)
         Me.cmb_qtd.TabIndex = 15
         '
         'btn_add_pizza
@@ -202,7 +203,7 @@ Partial Class frm_pedido
         Me.cmb_pizzas.FormattingEnabled = True
         Me.cmb_pizzas.Location = New System.Drawing.Point(289, 400)
         Me.cmb_pizzas.Name = "cmb_pizzas"
-        Me.cmb_pizzas.Size = New System.Drawing.Size(241, 32)
+        Me.cmb_pizzas.Size = New System.Drawing.Size(241, 27)
         Me.cmb_pizzas.TabIndex = 13
         '
         'lbl_cliente
@@ -220,7 +221,7 @@ Partial Class frm_pedido
         Me.Label5.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Location = New System.Drawing.Point(611, 11)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(60, 23)
+        Me.Label5.Size = New System.Drawing.Size(50, 20)
         Me.Label5.TabIndex = 23
         Me.Label5.Text = "Login:"
         '
@@ -230,7 +231,7 @@ Partial Class frm_pedido
         Me.lbl_usuario_pedido.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_usuario_pedido.Location = New System.Drawing.Point(677, 11)
         Me.lbl_usuario_pedido.Name = "lbl_usuario_pedido"
-        Me.lbl_usuario_pedido.Size = New System.Drawing.Size(65, 24)
+        Me.lbl_usuario_pedido.Size = New System.Drawing.Size(55, 19)
         Me.lbl_usuario_pedido.TabIndex = 24
         Me.lbl_usuario_pedido.Text = "Label6"
         '
@@ -238,9 +239,9 @@ Partial Class frm_pedido
         '
         Me.lbl_subtotal.AutoSize = True
         Me.lbl_subtotal.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_subtotal.Location = New System.Drawing.Point(343, 443)
+        Me.lbl_subtotal.Location = New System.Drawing.Point(285, 448)
         Me.lbl_subtotal.Name = "lbl_subtotal"
-        Me.lbl_subtotal.Size = New System.Drawing.Size(103, 27)
+        Me.lbl_subtotal.Size = New System.Drawing.Size(85, 22)
         Me.lbl_subtotal.TabIndex = 27
         Me.lbl_subtotal.Text = "Sub total"
         '
@@ -250,7 +251,7 @@ Partial Class frm_pedido
         Me.lbl_dia.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_dia.Location = New System.Drawing.Point(554, 156)
         Me.lbl_dia.Name = "lbl_dia"
-        Me.lbl_dia.Size = New System.Drawing.Size(205, 27)
+        Me.lbl_dia.Size = New System.Drawing.Size(164, 22)
         Me.lbl_dia.TabIndex = 28
         Me.lbl_dia.Text = "lbl_data não visível"
         Me.lbl_dia.Visible = False
@@ -273,7 +274,7 @@ Partial Class frm_pedido
         Me.lbl_total.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_total.Location = New System.Drawing.Point(102, 432)
         Me.lbl_total.Name = "lbl_total"
-        Me.lbl_total.Size = New System.Drawing.Size(64, 27)
+        Me.lbl_total.Size = New System.Drawing.Size(52, 22)
         Me.lbl_total.TabIndex = 31
         Me.lbl_total.Text = "Total"
         '
@@ -293,7 +294,7 @@ Partial Class frm_pedido
         Me.Label7.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.Location = New System.Drawing.Point(102, 405)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(64, 27)
+        Me.Label7.Size = New System.Drawing.Size(52, 22)
         Me.Label7.TabIndex = 30
         Me.Label7.Text = "Total"
         '
@@ -301,9 +302,9 @@ Partial Class frm_pedido
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(283, 443)
+        Me.Label6.Location = New System.Drawing.Point(229, 448)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(63, 27)
+        Me.Label6.Size = New System.Drawing.Size(50, 21)
         Me.Label6.TabIndex = 26
         Me.Label6.Text = "Valor"
         '
@@ -312,7 +313,7 @@ Partial Class frm_pedido
         Me.lbl_Pedido.AutoSize = True
         Me.lbl_Pedido.Location = New System.Drawing.Point(22, 440)
         Me.lbl_Pedido.Name = "lbl_Pedido"
-        Me.lbl_Pedido.Size = New System.Drawing.Size(57, 19)
+        Me.lbl_Pedido.Size = New System.Drawing.Size(45, 16)
         Me.lbl_Pedido.TabIndex = 33
         Me.lbl_Pedido.Text = "pedido"
         '
@@ -321,14 +322,24 @@ Partial Class frm_pedido
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(22, 420)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(67, 19)
+        Me.Label3.Size = New System.Drawing.Size(53, 16)
         Me.Label3.TabIndex = 34
         Me.Label3.Text = "Número"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(404, 438)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(42, 16)
+        Me.Label4.TabIndex = 35
+        Me.Label4.Text = "UNID."
         '
         'frm_pedido
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.ClientSize = New System.Drawing.Size(842, 495)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.lbl_Pedido)
         Me.Controls.Add(Me.btn_cancel)
@@ -386,4 +397,5 @@ Partial Class frm_pedido
     Friend WithEvents Label6 As Label
     Friend WithEvents lbl_Pedido As Label
     Friend WithEvents Label3 As Label
+    Friend WithEvents Label4 As Label
 End Class
