@@ -63,6 +63,16 @@ Namespace My
                 Return CType(Me("pizzariaConnectionString"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-T0D0DM3D;Initial Catalog=pizzaria;Integrated Security=True")>  _
+        Public ReadOnly Property pizzariaConnectionString1() As String
+            Get
+                Return CType(Me("pizzariaConnectionString1"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 

@@ -122,6 +122,12 @@
     <Compile Include="frm_pizza.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frm_Relatorio.Designer.vb">
+      <DependentUpon>frm_Relatorio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Relatorio.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frm_usuario.Designer.vb">
       <DependentUpon>frm_usuario.vb</DependentUpon>
     </Compile>
@@ -149,6 +155,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>pizzariaDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="pizzariaDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pizzariaDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="tela_admin.Designer.vb">
       <DependentUpon>tela_admin.vb</DependentUpon>
     </Compile>
@@ -175,6 +186,9 @@
     <EmbeddedResource Include="frm_pizza.resx">
       <DependentUpon>frm_pizza.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_Relatorio.resx">
+      <DependentUpon>frm_Relatorio.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_usuario.resx">
       <DependentUpon>frm_usuario.vb</DependentUpon>
     </EmbeddedResource>
@@ -184,6 +198,7 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report2.rdlc" />
     <EmbeddedResource Include="tela_admin.resx">
       <DependentUpon>tela_admin.vb</DependentUpon>
     </EmbeddedResource>
@@ -213,6 +228,17 @@
     </None>
     <None Include="pizzariaDataSet.xss">
       <DependentUpon>pizzariaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="pizzariaDataSet1.xsc">
+      <DependentUpon>pizzariaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="pizzariaDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pizzariaDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pizzariaDataSet1.xss">
+      <DependentUpon>pizzariaDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

@@ -118,6 +118,7 @@
 
                 If .CurrentRow.Cells(7).Selected = True Then
                     AuxPedido = .CurrentRow.Cells(0).Value
+                    frm_Relatorio.Show()
                 End If
             End With
 
@@ -146,5 +147,21 @@
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         carregar_andamento()
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs)
+        frm_Relatorio.Show()
+    End Sub
+
+    Private Sub Button3_Click_1(sender As Object, e As EventArgs) Handles Button3.Click
+
+        resp = MsgBox("Deseja excluir todos os dados?", MsgBoxStyle.Information + MsgBoxStyle.YesNo, "Aviso")
+
+        If resp = MsgBoxResult.Yes Then
+            sql = "truncate table tb_andamento"
+            db.Execute(sql)
+            MsgBox("Registro excluído com sucesso!", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, " Aviso")
+            carregar_andamento()
+        End If
     End Sub
 End Class

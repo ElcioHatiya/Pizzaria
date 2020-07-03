@@ -39,6 +39,12 @@ Partial Class tela_pedidos
         Me.Column6 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.txt_busca_telefone = New System.Windows.Forms.TextBox()
         Me.dgv_pedidos_andamento = New System.Windows.Forms.DataGridView()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.txt_busca_pedido = New System.Windows.Forms.TextBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -47,12 +53,7 @@ Partial Class tela_pedidos
         Me.Column15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column16 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Column11 = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.txt_busca_pedido = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
         CType(Me.dgv_clientes, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgv_pedidos_andamento, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -128,7 +129,7 @@ Partial Class tela_pedidos
         Me.dgv_clientes.ReadOnly = True
         Me.dgv_clientes.RowHeadersWidth = 51
         Me.dgv_clientes.RowTemplate.Height = 24
-        Me.dgv_clientes.Size = New System.Drawing.Size(836, 182)
+        Me.dgv_clientes.Size = New System.Drawing.Size(789, 182)
         Me.dgv_clientes.TabIndex = 11
         '
         'Column1
@@ -210,73 +211,8 @@ Partial Class tela_pedidos
         Me.dgv_pedidos_andamento.ReadOnly = True
         Me.dgv_pedidos_andamento.RowHeadersWidth = 51
         Me.dgv_pedidos_andamento.RowTemplate.Height = 24
-        Me.dgv_pedidos_andamento.Size = New System.Drawing.Size(826, 186)
+        Me.dgv_pedidos_andamento.Size = New System.Drawing.Size(789, 186)
         Me.dgv_pedidos_andamento.TabIndex = 20
-        '
-        'Column8
-        '
-        Me.Column8.HeaderText = "PEDIDO"
-        Me.Column8.MinimumWidth = 6
-        Me.Column8.Name = "Column8"
-        Me.Column8.ReadOnly = True
-        Me.Column8.Width = 77
-        '
-        'Column9
-        '
-        Me.Column9.HeaderText = "TELEFONE"
-        Me.Column9.MinimumWidth = 6
-        Me.Column9.Name = "Column9"
-        Me.Column9.ReadOnly = True
-        Me.Column9.Width = 88
-        '
-        'Column10
-        '
-        Me.Column10.HeaderText = "CLIENTE"
-        Me.Column10.MinimumWidth = 6
-        Me.Column10.Name = "Column10"
-        Me.Column10.ReadOnly = True
-        Me.Column10.Width = 78
-        '
-        'Column12
-        '
-        Me.Column12.HeaderText = "VALOR"
-        Me.Column12.MinimumWidth = 6
-        Me.Column12.Name = "Column12"
-        Me.Column12.ReadOnly = True
-        Me.Column12.Width = 72
-        '
-        'Column13
-        '
-        Me.Column13.HeaderText = "DATA"
-        Me.Column13.MinimumWidth = 6
-        Me.Column13.Name = "Column13"
-        Me.Column13.ReadOnly = True
-        Me.Column13.Width = 65
-        '
-        'Column15
-        '
-        Me.Column15.HeaderText = "USUÁRIO"
-        Me.Column15.MinimumWidth = 6
-        Me.Column15.Name = "Column15"
-        Me.Column15.ReadOnly = True
-        Me.Column15.Width = 87
-        '
-        'Column16
-        '
-        Me.Column16.HeaderText = "EXCLUIR"
-        Me.Column16.Image = CType(resources.GetObject("Column16.Image"), System.Drawing.Image)
-        Me.Column16.MinimumWidth = 6
-        Me.Column16.Name = "Column16"
-        Me.Column16.ReadOnly = True
-        Me.Column16.Width = 62
-        '
-        'Column11
-        '
-        Me.Column11.HeaderText = "DETALHES"
-        Me.Column11.MinimumWidth = 6
-        Me.Column11.Name = "Column11"
-        Me.Column11.ReadOnly = True
-        Me.Column11.Width = 72
         '
         'Label1
         '
@@ -338,13 +274,87 @@ Partial Class tela_pedidos
         Me.Button2.Text = "LIMPAR BUSCA"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'Column8
+        '
+        Me.Column8.HeaderText = "PEDIDO"
+        Me.Column8.MinimumWidth = 6
+        Me.Column8.Name = "Column8"
+        Me.Column8.ReadOnly = True
+        Me.Column8.Width = 77
+        '
+        'Column9
+        '
+        Me.Column9.HeaderText = "TELEFONE"
+        Me.Column9.MinimumWidth = 6
+        Me.Column9.Name = "Column9"
+        Me.Column9.ReadOnly = True
+        Me.Column9.Width = 88
+        '
+        'Column10
+        '
+        Me.Column10.HeaderText = "CLIENTE"
+        Me.Column10.MinimumWidth = 6
+        Me.Column10.Name = "Column10"
+        Me.Column10.ReadOnly = True
+        Me.Column10.Width = 78
+        '
+        'Column12
+        '
+        Me.Column12.HeaderText = "VALOR"
+        Me.Column12.MinimumWidth = 6
+        Me.Column12.Name = "Column12"
+        Me.Column12.ReadOnly = True
+        Me.Column12.Width = 72
+        '
+        'Column13
+        '
+        Me.Column13.HeaderText = "DATA"
+        Me.Column13.MinimumWidth = 6
+        Me.Column13.Name = "Column13"
+        Me.Column13.ReadOnly = True
+        Me.Column13.Width = 65
+        '
+        'Column15
+        '
+        Me.Column15.HeaderText = "USUÁRIO"
+        Me.Column15.MinimumWidth = 6
+        Me.Column15.Name = "Column15"
+        Me.Column15.ReadOnly = True
+        Me.Column15.Width = 87
+        '
+        'Column16
+        '
+        Me.Column16.HeaderText = "EXCLUIR"
+        Me.Column16.Image = CType(resources.GetObject("Column16.Image"), System.Drawing.Image)
+        Me.Column16.MinimumWidth = 6
+        Me.Column16.Name = "Column16"
+        Me.Column16.ReadOnly = True
+        Me.Column16.Width = 62
+        '
+        'Column11
+        '
+        Me.Column11.HeaderText = "Column11"
+        Me.Column11.Name = "Column11"
+        Me.Column11.ReadOnly = True
+        Me.Column11.Width = 70
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(424, 262)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(180, 23)
+        Me.Button3.TabIndex = 27
+        Me.Button3.Text = "Limpar registro de pedidos"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'tela_pedidos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
         Me.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.ClientSize = New System.Drawing.Size(962, 580)
+        Me.ClientSize = New System.Drawing.Size(845, 580)
+        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.txt_busca_pedido)
@@ -388,6 +398,10 @@ Partial Class tela_pedidos
     Friend WithEvents Column6 As DataGridViewImageColumn
     Friend WithEvents Label1 As Label
     Friend WithEvents Label5 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents txt_busca_pedido As TextBox
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
     Friend WithEvents Column8 As DataGridViewTextBoxColumn
     Friend WithEvents Column9 As DataGridViewTextBoxColumn
     Friend WithEvents Column10 As DataGridViewTextBoxColumn
@@ -396,8 +410,5 @@ Partial Class tela_pedidos
     Friend WithEvents Column15 As DataGridViewTextBoxColumn
     Friend WithEvents Column16 As DataGridViewImageColumn
     Friend WithEvents Column11 As DataGridViewImageColumn
-    Friend WithEvents Label6 As Label
-    Friend WithEvents txt_busca_pedido As TextBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents Button3 As Button
 End Class
