@@ -67,5 +67,4 @@
             MsgBox("Erro ao processar consulta!", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Atenção!")
         End Try
     End Sub
-
 End Class

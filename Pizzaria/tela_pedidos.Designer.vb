@@ -45,6 +45,7 @@ Partial Class tela_pedidos
         Me.txt_busca_pedido = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -53,7 +54,6 @@ Partial Class tela_pedidos
         Me.Column15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column16 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Column11 = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.Button3 = New System.Windows.Forms.Button()
         CType(Me.dgv_clientes, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgv_pedidos_andamento, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -274,6 +274,15 @@ Partial Class tela_pedidos
         Me.Button2.Text = "LIMPAR BUSCA"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(424, 262)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(180, 23)
+        Me.Button3.TabIndex = 27
+        Me.Button3.Text = "Limpar registro de pedidos"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'Column8
         '
         Me.Column8.HeaderText = "PEDIDO"
@@ -333,19 +342,11 @@ Partial Class tela_pedidos
         '
         'Column11
         '
-        Me.Column11.HeaderText = "Column11"
+        Me.Column11.HeaderText = "DETALHES"
+        Me.Column11.Image = CType(resources.GetObject("Column11.Image"), System.Drawing.Image)
         Me.Column11.Name = "Column11"
         Me.Column11.ReadOnly = True
-        Me.Column11.Width = 70
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(424, 262)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(180, 23)
-        Me.Button3.TabIndex = 27
-        Me.Button3.Text = "Limpar registro de pedidos"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.Column11.Width = 72
         '
         'tela_pedidos
         '
@@ -402,6 +403,7 @@ Partial Class tela_pedidos
     Friend WithEvents txt_busca_pedido As TextBox
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
+    Friend WithEvents Button3 As Button
     Friend WithEvents Column8 As DataGridViewTextBoxColumn
     Friend WithEvents Column9 As DataGridViewTextBoxColumn
     Friend WithEvents Column10 As DataGridViewTextBoxColumn
@@ -410,5 +412,4 @@ Partial Class tela_pedidos
     Friend WithEvents Column15 As DataGridViewTextBoxColumn
     Friend WithEvents Column16 As DataGridViewImageColumn
     Friend WithEvents Column11 As DataGridViewImageColumn
-    Friend WithEvents Button3 As Button
 End Class

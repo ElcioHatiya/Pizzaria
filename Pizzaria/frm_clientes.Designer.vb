@@ -43,9 +43,10 @@ Partial Class frm_clientes
         '
         Me.btn_cadastrar_cliente.BackColor = System.Drawing.SystemColors.ButtonShadow
         Me.btn_cadastrar_cliente.Font = New System.Drawing.Font("Microsoft YaHei", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_cadastrar_cliente.Location = New System.Drawing.Point(331, 234)
+        Me.btn_cadastrar_cliente.Location = New System.Drawing.Point(248, 190)
+        Me.btn_cadastrar_cliente.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btn_cadastrar_cliente.Name = "btn_cadastrar_cliente"
-        Me.btn_cadastrar_cliente.Size = New System.Drawing.Size(148, 155)
+        Me.btn_cadastrar_cliente.Size = New System.Drawing.Size(111, 126)
         Me.btn_cadastrar_cliente.TabIndex = 29
         Me.btn_cadastrar_cliente.Text = "Gravar dados"
         Me.btn_cadastrar_cliente.UseVisualStyleBackColor = False
@@ -53,136 +54,150 @@ Partial Class frm_clientes
         'txt_cidade
         '
         Me.txt_cidade.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_cidade.Location = New System.Drawing.Point(15, 362)
+        Me.txt_cidade.Location = New System.Drawing.Point(11, 294)
+        Me.txt_cidade.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txt_cidade.Name = "txt_cidade"
-        Me.txt_cidade.Size = New System.Drawing.Size(295, 27)
+        Me.txt_cidade.Size = New System.Drawing.Size(222, 23)
         Me.txt_cidade.TabIndex = 28
         '
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(12, 341)
+        Me.Label7.Location = New System.Drawing.Point(9, 277)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(76, 24)
+        Me.Label7.Size = New System.Drawing.Size(64, 19)
         Me.Label7.TabIndex = 27
         Me.Label7.Text = "CIDADE"
         '
         'txt_bairro
         '
         Me.txt_bairro.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_bairro.Location = New System.Drawing.Point(14, 300)
+        Me.txt_bairro.Location = New System.Drawing.Point(10, 244)
+        Me.txt_bairro.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txt_bairro.Name = "txt_bairro"
-        Me.txt_bairro.Size = New System.Drawing.Size(295, 27)
+        Me.txt_bairro.Size = New System.Drawing.Size(222, 23)
         Me.txt_bairro.TabIndex = 26
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(11, 279)
+        Me.Label6.Location = New System.Drawing.Point(8, 227)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(79, 24)
+        Me.Label6.Size = New System.Drawing.Size(66, 19)
         Me.Label6.TabIndex = 25
         Me.Label6.Text = "BAIRRO"
         '
         'txt_comp
         '
         Me.txt_comp.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_comp.Location = New System.Drawing.Point(12, 234)
+        Me.txt_comp.Location = New System.Drawing.Point(9, 190)
+        Me.txt_comp.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txt_comp.Name = "txt_comp"
-        Me.txt_comp.Size = New System.Drawing.Size(298, 27)
+        Me.txt_comp.Size = New System.Drawing.Size(224, 23)
         Me.txt_comp.TabIndex = 24
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(9, 213)
+        Me.Label5.Location = New System.Drawing.Point(7, 173)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(236, 24)
+        Me.Label5.Size = New System.Drawing.Size(195, 19)
         Me.Label5.TabIndex = 23
         Me.Label5.Text = "NÚMERO/COMPLEMENTO"
         '
         'txt_endereco
         '
         Me.txt_endereco.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_endereco.Location = New System.Drawing.Point(13, 169)
+        Me.txt_endereco.Location = New System.Drawing.Point(10, 137)
+        Me.txt_endereco.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txt_endereco.Name = "txt_endereco"
-        Me.txt_endereco.Size = New System.Drawing.Size(466, 27)
+        Me.txt_endereco.Size = New System.Drawing.Size(350, 23)
         Me.txt_endereco.TabIndex = 22
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(10, 148)
+        Me.Label4.Location = New System.Drawing.Point(8, 120)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(48, 24)
+        Me.Label4.Size = New System.Drawing.Size(41, 19)
         Me.Label4.TabIndex = 21
         Me.Label4.Text = "RUA"
         '
         'txt_cep
         '
         Me.txt_cep.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_cep.Location = New System.Drawing.Point(350, 96)
+        Me.txt_cep.Location = New System.Drawing.Point(262, 78)
+        Me.txt_cep.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txt_cep.Mask = "99999-999"
         Me.txt_cep.Name = "txt_cep"
-        Me.txt_cep.Size = New System.Drawing.Size(129, 27)
+        Me.txt_cep.Size = New System.Drawing.Size(98, 23)
         Me.txt_cep.TabIndex = 20
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(347, 75)
+        Me.Label3.Location = New System.Drawing.Point(260, 61)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(42, 24)
+        Me.Label3.Size = New System.Drawing.Size(35, 19)
         Me.Label3.TabIndex = 19
         Me.Label3.Text = "CEP"
         '
         'txt_telefone
         '
         Me.txt_telefone.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_telefone.Location = New System.Drawing.Point(12, 96)
+        Me.txt_telefone.Location = New System.Drawing.Point(9, 78)
+        Me.txt_telefone.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txt_telefone.Name = "txt_telefone"
-        Me.txt_telefone.Size = New System.Drawing.Size(296, 27)
+        Me.txt_telefone.Size = New System.Drawing.Size(223, 23)
         Me.txt_telefone.TabIndex = 18
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(9, 75)
+        Me.Label2.Location = New System.Drawing.Point(7, 61)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(102, 24)
+        Me.Label2.Size = New System.Drawing.Size(85, 19)
         Me.Label2.TabIndex = 17
         Me.Label2.Text = "TELEFONE "
         '
         'txt_nome_cliente
         '
         Me.txt_nome_cliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_nome_cliente.Location = New System.Drawing.Point(12, 32)
+        Me.txt_nome_cliente.Location = New System.Drawing.Point(9, 26)
+        Me.txt_nome_cliente.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txt_nome_cliente.Name = "txt_nome_cliente"
-        Me.txt_nome_cliente.Size = New System.Drawing.Size(467, 27)
+        Me.txt_nome_cliente.Size = New System.Drawing.Size(351, 23)
         Me.txt_nome_cliente.TabIndex = 16
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(9, 11)
+        Me.Label1.Location = New System.Drawing.Point(7, 9)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(65, 24)
+        Me.Label1.Size = New System.Drawing.Size(54, 19)
         Me.Label1.TabIndex = 15
         Me.Label1.Text = "NOME"
         '
         'frm_clientes
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
-        Me.ClientSize = New System.Drawing.Size(493, 408)
+        Me.ClientSize = New System.Drawing.Size(370, 332)
         Me.Controls.Add(Me.btn_cadastrar_cliente)
         Me.Controls.Add(Me.txt_cidade)
         Me.Controls.Add(Me.Label7)
@@ -198,6 +213,7 @@ Partial Class frm_clientes
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.txt_nome_cliente)
         Me.Controls.Add(Me.Label1)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "frm_clientes"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "CLIENTE"
