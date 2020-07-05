@@ -22,7 +22,7 @@ Partial Class frm_pizza
     'Não o modifique usando o editor de códigos.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_pizza))
         Me.dgv_pizzas = New System.Windows.Forms.DataGridView()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -51,7 +51,7 @@ Partial Class frm_pizza
         Me.dgv_pizzas.ReadOnly = True
         Me.dgv_pizzas.RowHeadersWidth = 51
         Me.dgv_pizzas.RowTemplate.Height = 24
-        Me.dgv_pizzas.Size = New System.Drawing.Size(309, 242)
+        Me.dgv_pizzas.Size = New System.Drawing.Size(374, 242)
         Me.dgv_pizzas.TabIndex = 9
         '
         'Column1
@@ -64,9 +64,9 @@ Partial Class frm_pizza
         '
         'Column3
         '
-        DataGridViewCellStyle1.Format = "C2"
-        DataGridViewCellStyle1.NullValue = Nothing
-        Me.Column3.DefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.Format = "C2"
+        DataGridViewCellStyle2.NullValue = Nothing
+        Me.Column3.DefaultCellStyle = DataGridViewCellStyle2
         Me.Column3.HeaderText = "PREÇO"
         Me.Column3.MinimumWidth = 6
         Me.Column3.Name = "Column3"
@@ -88,7 +88,7 @@ Partial Class frm_pizza
         Me.btn_nova_pizza.BackColor = System.Drawing.SystemColors.HotTrack
         Me.btn_nova_pizza.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_nova_pizza.ForeColor = System.Drawing.SystemColors.HighlightText
-        Me.btn_nova_pizza.Location = New System.Drawing.Point(143, 155)
+        Me.btn_nova_pizza.Location = New System.Drawing.Point(207, 155)
         Me.btn_nova_pizza.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_nova_pizza.Name = "btn_nova_pizza"
         Me.btn_nova_pizza.Size = New System.Drawing.Size(182, 52)
@@ -102,7 +102,7 @@ Partial Class frm_pizza
         Me.txt_nova_pizza.Location = New System.Drawing.Point(15, 120)
         Me.txt_nova_pizza.Margin = New System.Windows.Forms.Padding(2)
         Me.txt_nova_pizza.Name = "txt_nova_pizza"
-        Me.txt_nova_pizza.Size = New System.Drawing.Size(310, 29)
+        Me.txt_nova_pizza.Size = New System.Drawing.Size(374, 29)
         Me.txt_nova_pizza.TabIndex = 6
         '
         'Label1
@@ -122,7 +122,7 @@ Partial Class frm_pizza
         Me.txt_valor.Location = New System.Drawing.Point(15, 178)
         Me.txt_valor.Margin = New System.Windows.Forms.Padding(2)
         Me.txt_valor.Name = "txt_valor"
-        Me.txt_valor.Size = New System.Drawing.Size(108, 29)
+        Me.txt_valor.Size = New System.Drawing.Size(162, 29)
         Me.txt_valor.TabIndex = 10
         '
         'Label2
@@ -160,7 +160,7 @@ Partial Class frm_pizza
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
-        Me.ClientSize = New System.Drawing.Size(347, 486)
+        Me.ClientSize = New System.Drawing.Size(400, 486)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)

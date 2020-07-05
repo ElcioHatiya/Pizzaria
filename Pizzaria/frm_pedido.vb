@@ -136,5 +136,6 @@
         btn_add_pizza.Visible = False
         btn_cancel.Visible = False
         lbl_subtotal.Text = ""
+        btn_emitir_pedido.Show()
     End Sub
 End Class

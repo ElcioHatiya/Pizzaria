@@ -23,8 +23,7 @@ Partial Class tela_pedidos
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(tela_pedidos))
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.lbl_login = New System.Windows.Forms.Label()
         Me.btn_novo_cadastro = New System.Windows.Forms.Button()
         Me.txt_busca_cliente = New System.Windows.Forms.TextBox()
@@ -55,30 +54,22 @@ Partial Class tela_pedidos
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.Label7 = New System.Windows.Forms.Label()
         CType(Me.dgv_clientes, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgv_pedidos_andamento, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(675, 640)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(63, 21)
-        Me.Label4.TabIndex = 18
-        Me.Label4.Text = "Log-in:"
         '
         'lbl_login
         '
         Me.lbl_login.AutoSize = True
         Me.lbl_login.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_login.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.lbl_login.Location = New System.Drawing.Point(744, 639)
+        Me.lbl_login.Location = New System.Drawing.Point(478, 479)
         Me.lbl_login.Name = "lbl_login"
         Me.lbl_login.Size = New System.Drawing.Size(70, 22)
         Me.lbl_login.TabIndex = 17
         Me.lbl_login.Text = "usuario"
+        Me.lbl_login.Visible = False
         '
         'btn_novo_cadastro
         '
@@ -86,9 +77,9 @@ Partial Class tela_pedidos
         Me.btn_novo_cadastro.BackColor = System.Drawing.SystemColors.MenuHighlight
         Me.btn_novo_cadastro.Font = New System.Drawing.Font("Microsoft YaHei", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_novo_cadastro.ForeColor = System.Drawing.SystemColors.HighlightText
-        Me.btn_novo_cadastro.Location = New System.Drawing.Point(468, 605)
+        Me.btn_novo_cadastro.Location = New System.Drawing.Point(646, 607)
         Me.btn_novo_cadastro.Name = "btn_novo_cadastro"
-        Me.btn_novo_cadastro.Size = New System.Drawing.Size(198, 61)
+        Me.btn_novo_cadastro.Size = New System.Drawing.Size(184, 61)
         Me.btn_novo_cadastro.TabIndex = 15
         Me.btn_novo_cadastro.Text = "Novo Cadastro"
         Me.btn_novo_cadastro.UseVisualStyleBackColor = False
@@ -96,7 +87,7 @@ Partial Class tela_pedidos
         'txt_busca_cliente
         '
         Me.txt_busca_cliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_busca_cliente.Location = New System.Drawing.Point(191, 640)
+        Me.txt_busca_cliente.Location = New System.Drawing.Point(380, 642)
         Me.txt_busca_cliente.Name = "txt_busca_cliente"
         Me.txt_busca_cliente.Size = New System.Drawing.Size(260, 26)
         Me.txt_busca_cliente.TabIndex = 14
@@ -105,7 +96,7 @@ Partial Class tela_pedidos
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(96, 608)
+        Me.Label3.Location = New System.Drawing.Point(285, 610)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(84, 22)
         Me.Label3.TabIndex = 13
@@ -115,7 +106,7 @@ Partial Class tela_pedidos
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(115, 644)
+        Me.Label2.Location = New System.Drawing.Point(304, 646)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(65, 22)
         Me.Label2.TabIndex = 12
@@ -129,12 +120,12 @@ Partial Class tela_pedidos
         Me.dgv_clientes.BackgroundColor = System.Drawing.SystemColors.MenuHighlight
         Me.dgv_clientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgv_clientes.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column7, Me.Column6})
-        Me.dgv_clientes.Location = New System.Drawing.Point(33, 343)
+        Me.dgv_clientes.Location = New System.Drawing.Point(12, 343)
         Me.dgv_clientes.Name = "dgv_clientes"
         Me.dgv_clientes.ReadOnly = True
         Me.dgv_clientes.RowHeadersWidth = 51
         Me.dgv_clientes.RowTemplate.Height = 24
-        Me.dgv_clientes.Size = New System.Drawing.Size(789, 242)
+        Me.dgv_clientes.Size = New System.Drawing.Size(818, 242)
         Me.dgv_clientes.TabIndex = 11
         '
         'Column1
@@ -199,7 +190,7 @@ Partial Class tela_pedidos
         'txt_busca_telefone
         '
         Me.txt_busca_telefone.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_busca_telefone.Location = New System.Drawing.Point(191, 605)
+        Me.txt_busca_telefone.Location = New System.Drawing.Point(380, 607)
         Me.txt_busca_telefone.Name = "txt_busca_telefone"
         Me.txt_busca_telefone.Size = New System.Drawing.Size(260, 29)
         Me.txt_busca_telefone.TabIndex = 19
@@ -212,12 +203,12 @@ Partial Class tela_pedidos
         Me.dgv_pedidos_andamento.BackgroundColor = System.Drawing.SystemColors.ActiveCaption
         Me.dgv_pedidos_andamento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgv_pedidos_andamento.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column8, Me.Column9, Me.Column10, Me.Column12, Me.Column13, Me.Column15, Me.Column16, Me.Column11})
-        Me.dgv_pedidos_andamento.Location = New System.Drawing.Point(33, 31)
+        Me.dgv_pedidos_andamento.Location = New System.Drawing.Point(12, 31)
         Me.dgv_pedidos_andamento.Name = "dgv_pedidos_andamento"
         Me.dgv_pedidos_andamento.ReadOnly = True
         Me.dgv_pedidos_andamento.RowHeadersWidth = 51
         Me.dgv_pedidos_andamento.RowTemplate.Height = 24
-        Me.dgv_pedidos_andamento.Size = New System.Drawing.Size(789, 233)
+        Me.dgv_pedidos_andamento.Size = New System.Drawing.Size(818, 233)
         Me.dgv_pedidos_andamento.TabIndex = 20
         '
         'Column8
@@ -246,9 +237,9 @@ Partial Class tela_pedidos
         '
         'Column12
         '
-        DataGridViewCellStyle2.Format = "C2"
-        DataGridViewCellStyle2.NullValue = Nothing
-        Me.Column12.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle1.Format = "C2"
+        DataGridViewCellStyle1.NullValue = Nothing
+        Me.Column12.DefaultCellStyle = DataGridViewCellStyle1
         Me.Column12.HeaderText = "VALOR"
         Me.Column12.MinimumWidth = 6
         Me.Column12.Name = "Column12"
@@ -293,7 +284,7 @@ Partial Class tela_pedidos
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.SystemColors.Highlight
         Me.Label1.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(29, 321)
+        Me.Label1.Location = New System.Drawing.Point(12, 321)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(76, 19)
         Me.Label1.TabIndex = 21
@@ -304,7 +295,7 @@ Partial Class tela_pedidos
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.SystemColors.Highlight
         Me.Label5.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(29, 9)
+        Me.Label5.Location = New System.Drawing.Point(12, 9)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(201, 19)
         Me.Label5.TabIndex = 22
@@ -363,6 +354,14 @@ Partial Class tela_pedidos
         Me.Button3.Text = "Apagar Tudo"
         Me.Button3.UseVisualStyleBackColor = False
         '
+        'Label7
+        '
+        Me.Label7.Image = CType(resources.GetObject("Label7.Image"), System.Drawing.Image)
+        Me.Label7.Location = New System.Drawing.Point(13, 588)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(102, 81)
+        Me.Label7.TabIndex = 28
+        '
         'tela_pedidos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 15.0!)
@@ -370,6 +369,7 @@ Partial Class tela_pedidos
         Me.AutoSize = True
         Me.BackColor = System.Drawing.SystemColors.ControlDark
         Me.ClientSize = New System.Drawing.Size(842, 678)
+        Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
@@ -379,7 +379,6 @@ Partial Class tela_pedidos
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.dgv_pedidos_andamento)
         Me.Controls.Add(Me.txt_busca_telefone)
-        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.lbl_login)
         Me.Controls.Add(Me.btn_novo_cadastro)
         Me.Controls.Add(Me.txt_busca_cliente)
@@ -396,7 +395,6 @@ Partial Class tela_pedidos
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Label4 As Label
     Friend WithEvents lbl_login As Label
     Friend WithEvents btn_novo_cadastro As Button
     Friend WithEvents txt_busca_cliente As TextBox
@@ -427,4 +425,5 @@ Partial Class tela_pedidos
     Friend WithEvents Column15 As DataGridViewTextBoxColumn
     Friend WithEvents Column16 As DataGridViewImageColumn
     Friend WithEvents Column11 As DataGridViewImageColumn
+    Friend WithEvents Label7 As Label
 End Class
