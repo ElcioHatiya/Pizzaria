@@ -121,7 +121,6 @@ Partial Class frm_login
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(289, 213)
         Me.Label1.TabIndex = 32
-        Me.Label1.Text = "Label1"
         '
         'frm_login
         '
