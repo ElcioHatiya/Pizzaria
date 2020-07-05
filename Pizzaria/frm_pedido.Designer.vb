@@ -22,12 +22,20 @@ Partial Class frm_pedido
     'Não o modifique usando o editor de códigos.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_pedido))
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lbl_telefone = New System.Windows.Forms.Label()
         Me.dgv_pedido = New System.Windows.Forms.DataGridView()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column8 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.btn_emitir_pedido = New System.Windows.Forms.Button()
         Me.cmb_qtd = New System.Windows.Forms.ComboBox()
         Me.btn_add_pizza = New System.Windows.Forms.Button()
@@ -44,14 +52,8 @@ Partial Class frm_pedido
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column8 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
         CType(Me.dgv_pedido, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -59,26 +61,28 @@ Partial Class frm_pedido
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(12, 339)
+        Me.Label2.ForeColor = System.Drawing.SystemColors.HotTrack
+        Me.Label2.Location = New System.Drawing.Point(12, 424)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(74, 17)
+        Me.Label2.Size = New System.Drawing.Size(65, 17)
         Me.Label2.TabIndex = 20
-        Me.Label2.Text = "TELEFONE:"
+        Me.Label2.Text = "Telefone:"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(27, 361)
+        Me.Label1.ForeColor = System.Drawing.SystemColors.HotTrack
+        Me.Label1.Location = New System.Drawing.Point(23, 446)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(62, 17)
+        Me.Label1.Size = New System.Drawing.Size(54, 17)
         Me.Label1.TabIndex = 19
-        Me.Label1.Text = "CLIENTE:"
+        Me.Label1.Text = "Cliente:"
         '
         'lbl_telefone
         '
         Me.lbl_telefone.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_telefone.Location = New System.Drawing.Point(92, 339)
+        Me.lbl_telefone.Location = New System.Drawing.Point(83, 424)
         Me.lbl_telefone.Name = "lbl_telefone"
         Me.lbl_telefone.Size = New System.Drawing.Size(169, 22)
         Me.lbl_telefone.TabIndex = 18
@@ -92,178 +96,13 @@ Partial Class frm_pedido
         Me.dgv_pedido.BackgroundColor = System.Drawing.SystemColors.ActiveCaption
         Me.dgv_pedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgv_pedido.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column9, Me.Column3, Me.Column4, Me.Column5, Me.Column7, Me.Column8})
-        Me.dgv_pedido.Location = New System.Drawing.Point(1, -1)
+        Me.dgv_pedido.Location = New System.Drawing.Point(1, 84)
         Me.dgv_pedido.Name = "dgv_pedido"
         Me.dgv_pedido.ReadOnly = True
         Me.dgv_pedido.RowHeadersWidth = 51
         Me.dgv_pedido.RowTemplate.Height = 24
         Me.dgv_pedido.Size = New System.Drawing.Size(841, 337)
         Me.dgv_pedido.TabIndex = 17
-        '
-        'btn_emitir_pedido
-        '
-        Me.btn_emitir_pedido.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.btn_emitir_pedido.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btn_emitir_pedido.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_emitir_pedido.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btn_emitir_pedido.Location = New System.Drawing.Point(742, 345)
-        Me.btn_emitir_pedido.Name = "btn_emitir_pedido"
-        Me.btn_emitir_pedido.Size = New System.Drawing.Size(88, 59)
-        Me.btn_emitir_pedido.TabIndex = 16
-        Me.btn_emitir_pedido.Text = "EMITIR PEDIDO"
-        Me.btn_emitir_pedido.UseVisualStyleBackColor = False
-        '
-        'cmb_qtd
-        '
-        Me.cmb_qtd.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmb_qtd.FormattingEnabled = True
-        Me.cmb_qtd.Location = New System.Drawing.Point(523, 377)
-        Me.cmb_qtd.Name = "cmb_qtd"
-        Me.cmb_qtd.Size = New System.Drawing.Size(78, 27)
-        Me.cmb_qtd.TabIndex = 15
-        '
-        'btn_add_pizza
-        '
-        Me.btn_add_pizza.AutoSize = True
-        Me.btn_add_pizza.BackColor = System.Drawing.SystemColors.MenuHighlight
-        Me.btn_add_pizza.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_add_pizza.ForeColor = System.Drawing.SystemColors.Info
-        Me.btn_add_pizza.Location = New System.Drawing.Point(607, 345)
-        Me.btn_add_pizza.Name = "btn_add_pizza"
-        Me.btn_add_pizza.Size = New System.Drawing.Size(129, 59)
-        Me.btn_add_pizza.TabIndex = 14
-        Me.btn_add_pizza.Text = "ADICIONAR "
-        Me.btn_add_pizza.UseVisualStyleBackColor = False
-        Me.btn_add_pizza.Visible = False
-        '
-        'cmb_pizzas
-        '
-        Me.cmb_pizzas.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmb_pizzas.FormattingEnabled = True
-        Me.cmb_pizzas.Location = New System.Drawing.Point(360, 345)
-        Me.cmb_pizzas.Name = "cmb_pizzas"
-        Me.cmb_pizzas.Size = New System.Drawing.Size(241, 27)
-        Me.cmb_pizzas.TabIndex = 13
-        '
-        'lbl_cliente
-        '
-        Me.lbl_cliente.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_cliente.Location = New System.Drawing.Point(92, 361)
-        Me.lbl_cliente.Name = "lbl_cliente"
-        Me.lbl_cliente.Size = New System.Drawing.Size(169, 22)
-        Me.lbl_cliente.TabIndex = 12
-        Me.lbl_cliente.Text = "Nome"
-        '
-        'lbl_usuario_pedido
-        '
-        Me.lbl_usuario_pedido.AutoSize = True
-        Me.lbl_usuario_pedido.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_usuario_pedido.Location = New System.Drawing.Point(663, 224)
-        Me.lbl_usuario_pedido.Name = "lbl_usuario_pedido"
-        Me.lbl_usuario_pedido.Size = New System.Drawing.Size(125, 19)
-        Me.lbl_usuario_pedido.TabIndex = 24
-        Me.lbl_usuario_pedido.Text = "Login não visível"
-        Me.lbl_usuario_pedido.Visible = False
-        '
-        'lbl_subtotal
-        '
-        Me.lbl_subtotal.AutoSize = True
-        Me.lbl_subtotal.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_subtotal.Location = New System.Drawing.Point(356, 382)
-        Me.lbl_subtotal.Name = "lbl_subtotal"
-        Me.lbl_subtotal.Size = New System.Drawing.Size(85, 22)
-        Me.lbl_subtotal.TabIndex = 27
-        Me.lbl_subtotal.Text = "Sub total"
-        '
-        'lbl_dia
-        '
-        Me.lbl_dia.AutoSize = True
-        Me.lbl_dia.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_dia.Location = New System.Drawing.Point(554, 156)
-        Me.lbl_dia.Name = "lbl_dia"
-        Me.lbl_dia.Size = New System.Drawing.Size(164, 22)
-        Me.lbl_dia.TabIndex = 28
-        Me.lbl_dia.Text = "lbl_data não visível"
-        Me.lbl_dia.Visible = False
-        '
-        'btn_calc
-        '
-        Me.btn_calc.BackColor = System.Drawing.Color.Gainsboro
-        Me.btn_calc.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_calc.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.btn_calc.Location = New System.Drawing.Point(607, 345)
-        Me.btn_calc.Name = "btn_calc"
-        Me.btn_calc.Size = New System.Drawing.Size(129, 59)
-        Me.btn_calc.TabIndex = 29
-        Me.btn_calc.Text = "CALCULAR ITEM"
-        Me.btn_calc.UseVisualStyleBackColor = False
-        '
-        'lbl_total
-        '
-        Me.lbl_total.AutoSize = True
-        Me.lbl_total.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_total.Location = New System.Drawing.Point(763, 412)
-        Me.lbl_total.Name = "lbl_total"
-        Me.lbl_total.Size = New System.Drawing.Size(52, 22)
-        Me.lbl_total.TabIndex = 31
-        Me.lbl_total.Text = "Total"
-        '
-        'btn_cancel
-        '
-        Me.btn_cancel.BackColor = System.Drawing.SystemColors.GradientActiveCaption
-        Me.btn_cancel.Image = CType(resources.GetObject("btn_cancel.Image"), System.Drawing.Image)
-        Me.btn_cancel.Location = New System.Drawing.Point(742, 345)
-        Me.btn_cancel.Name = "btn_cancel"
-        Me.btn_cancel.Size = New System.Drawing.Size(59, 59)
-        Me.btn_cancel.TabIndex = 32
-        Me.btn_cancel.UseVisualStyleBackColor = False
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(679, 412)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(78, 22)
-        Me.Label7.TabIndex = 30
-        Me.Label7.Text = "Total R$"
-        '
-        'lbl_Pedido
-        '
-        Me.lbl_Pedido.AutoSize = True
-        Me.lbl_Pedido.Location = New System.Drawing.Point(102, 383)
-        Me.lbl_Pedido.Name = "lbl_Pedido"
-        Me.lbl_Pedido.Size = New System.Drawing.Size(45, 16)
-        Me.lbl_Pedido.TabIndex = 33
-        Me.lbl_Pedido.Text = "pedido"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(8, 383)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(91, 16)
-        Me.Label3.TabIndex = 34
-        Me.Label3.Text = "Pedido número"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(475, 382)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(42, 16)
-        Me.Label4.TabIndex = 35
-        Me.Label4.Text = "UNID."
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(321, 382)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(29, 21)
-        Me.Label6.TabIndex = 26
-        Me.Label6.Text = "R$"
         '
         'Column1
         '
@@ -299,9 +138,9 @@ Partial Class frm_pedido
         '
         'Column4
         '
-        DataGridViewCellStyle1.Format = "C2"
-        DataGridViewCellStyle1.NullValue = Nothing
-        Me.Column4.DefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.Format = "C2"
+        DataGridViewCellStyle2.NullValue = Nothing
+        Me.Column4.DefaultCellStyle = DataGridViewCellStyle2
         Me.Column4.HeaderText = "VALOR"
         Me.Column4.MinimumWidth = 6
         Me.Column4.Name = "Column4"
@@ -333,10 +172,200 @@ Partial Class frm_pedido
         Me.Column8.ReadOnly = True
         Me.Column8.Width = 62
         '
+        'btn_emitir_pedido
+        '
+        Me.btn_emitir_pedido.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.btn_emitir_pedido.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btn_emitir_pedido.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_emitir_pedido.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btn_emitir_pedido.Location = New System.Drawing.Point(742, 430)
+        Me.btn_emitir_pedido.Name = "btn_emitir_pedido"
+        Me.btn_emitir_pedido.Size = New System.Drawing.Size(88, 59)
+        Me.btn_emitir_pedido.TabIndex = 16
+        Me.btn_emitir_pedido.Text = "EMITIR PEDIDO"
+        Me.btn_emitir_pedido.UseVisualStyleBackColor = False
+        '
+        'cmb_qtd
+        '
+        Me.cmb_qtd.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmb_qtd.FormattingEnabled = True
+        Me.cmb_qtd.Location = New System.Drawing.Point(523, 462)
+        Me.cmb_qtd.Name = "cmb_qtd"
+        Me.cmb_qtd.Size = New System.Drawing.Size(78, 27)
+        Me.cmb_qtd.TabIndex = 15
+        '
+        'btn_add_pizza
+        '
+        Me.btn_add_pizza.AutoSize = True
+        Me.btn_add_pizza.BackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.btn_add_pizza.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_add_pizza.ForeColor = System.Drawing.SystemColors.Info
+        Me.btn_add_pizza.Location = New System.Drawing.Point(607, 430)
+        Me.btn_add_pizza.Name = "btn_add_pizza"
+        Me.btn_add_pizza.Size = New System.Drawing.Size(129, 59)
+        Me.btn_add_pizza.TabIndex = 14
+        Me.btn_add_pizza.Text = "ADICIONAR "
+        Me.btn_add_pizza.UseVisualStyleBackColor = False
+        Me.btn_add_pizza.Visible = False
+        '
+        'cmb_pizzas
+        '
+        Me.cmb_pizzas.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmb_pizzas.FormattingEnabled = True
+        Me.cmb_pizzas.Location = New System.Drawing.Point(360, 430)
+        Me.cmb_pizzas.Name = "cmb_pizzas"
+        Me.cmb_pizzas.Size = New System.Drawing.Size(241, 27)
+        Me.cmb_pizzas.TabIndex = 13
+        '
+        'lbl_cliente
+        '
+        Me.lbl_cliente.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_cliente.Location = New System.Drawing.Point(83, 446)
+        Me.lbl_cliente.Name = "lbl_cliente"
+        Me.lbl_cliente.Size = New System.Drawing.Size(169, 22)
+        Me.lbl_cliente.TabIndex = 12
+        Me.lbl_cliente.Text = "Nome"
+        '
+        'lbl_usuario_pedido
+        '
+        Me.lbl_usuario_pedido.AutoSize = True
+        Me.lbl_usuario_pedido.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_usuario_pedido.Location = New System.Drawing.Point(663, 309)
+        Me.lbl_usuario_pedido.Name = "lbl_usuario_pedido"
+        Me.lbl_usuario_pedido.Size = New System.Drawing.Size(125, 19)
+        Me.lbl_usuario_pedido.TabIndex = 24
+        Me.lbl_usuario_pedido.Text = "Login não visível"
+        Me.lbl_usuario_pedido.Visible = False
+        '
+        'lbl_subtotal
+        '
+        Me.lbl_subtotal.AutoSize = True
+        Me.lbl_subtotal.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_subtotal.ForeColor = System.Drawing.SystemColors.HotTrack
+        Me.lbl_subtotal.Location = New System.Drawing.Point(356, 467)
+        Me.lbl_subtotal.Name = "lbl_subtotal"
+        Me.lbl_subtotal.Size = New System.Drawing.Size(85, 22)
+        Me.lbl_subtotal.TabIndex = 27
+        Me.lbl_subtotal.Text = "Sub total"
+        '
+        'lbl_dia
+        '
+        Me.lbl_dia.AutoSize = True
+        Me.lbl_dia.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_dia.Location = New System.Drawing.Point(554, 241)
+        Me.lbl_dia.Name = "lbl_dia"
+        Me.lbl_dia.Size = New System.Drawing.Size(164, 22)
+        Me.lbl_dia.TabIndex = 28
+        Me.lbl_dia.Text = "lbl_data não visível"
+        Me.lbl_dia.Visible = False
+        '
+        'btn_calc
+        '
+        Me.btn_calc.BackColor = System.Drawing.Color.Gainsboro
+        Me.btn_calc.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_calc.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.btn_calc.Location = New System.Drawing.Point(607, 430)
+        Me.btn_calc.Name = "btn_calc"
+        Me.btn_calc.Size = New System.Drawing.Size(129, 59)
+        Me.btn_calc.TabIndex = 29
+        Me.btn_calc.Text = "CALCULAR ITEM"
+        Me.btn_calc.UseVisualStyleBackColor = False
+        '
+        'lbl_total
+        '
+        Me.lbl_total.AutoSize = True
+        Me.lbl_total.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_total.Location = New System.Drawing.Point(763, 497)
+        Me.lbl_total.Name = "lbl_total"
+        Me.lbl_total.Size = New System.Drawing.Size(52, 22)
+        Me.lbl_total.TabIndex = 31
+        Me.lbl_total.Text = "Total"
+        '
+        'btn_cancel
+        '
+        Me.btn_cancel.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.btn_cancel.Image = CType(resources.GetObject("btn_cancel.Image"), System.Drawing.Image)
+        Me.btn_cancel.Location = New System.Drawing.Point(742, 430)
+        Me.btn_cancel.Name = "btn_cancel"
+        Me.btn_cancel.Size = New System.Drawing.Size(59, 59)
+        Me.btn_cancel.TabIndex = 32
+        Me.btn_cancel.UseVisualStyleBackColor = False
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.SystemColors.HotTrack
+        Me.Label7.Location = New System.Drawing.Point(679, 497)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(78, 22)
+        Me.Label7.TabIndex = 30
+        Me.Label7.Text = "Total R$"
+        '
+        'lbl_Pedido
+        '
+        Me.lbl_Pedido.AutoSize = True
+        Me.lbl_Pedido.ForeColor = System.Drawing.SystemColors.HotTrack
+        Me.lbl_Pedido.Location = New System.Drawing.Point(102, 468)
+        Me.lbl_Pedido.Name = "lbl_Pedido"
+        Me.lbl_Pedido.Size = New System.Drawing.Size(45, 16)
+        Me.lbl_Pedido.TabIndex = 33
+        Me.lbl_Pedido.Text = "pedido"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.ForeColor = System.Drawing.SystemColors.HotTrack
+        Me.Label3.Location = New System.Drawing.Point(8, 468)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(91, 16)
+        Me.Label3.TabIndex = 34
+        Me.Label3.Text = "Pedido número"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(475, 467)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(42, 16)
+        Me.Label4.TabIndex = 35
+        Me.Label4.Text = "UNID."
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(321, 467)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(29, 21)
+        Me.Label6.TabIndex = 26
+        Me.Label6.Text = "R$"
+        '
+        'Label5
+        '
+        Me.Label5.Image = CType(resources.GetObject("Label5.Image"), System.Drawing.Image)
+        Me.Label5.Location = New System.Drawing.Point(12, 9)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(117, 68)
+        Me.Label5.TabIndex = 36
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Label8.Font = New System.Drawing.Font("Microsoft PhagsPa", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(372, 9)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(145, 49)
+        Me.Label8.TabIndex = 37
+        Me.Label8.Text = "Pedido"
+        '
         'frm_pedido
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
-        Me.ClientSize = New System.Drawing.Size(842, 446)
+        Me.ClientSize = New System.Drawing.Size(842, 531)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.lbl_Pedido)
@@ -394,4 +423,6 @@ Partial Class frm_pedido
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
     Friend WithEvents Column8 As DataGridViewImageColumn
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label8 As Label
 End Class

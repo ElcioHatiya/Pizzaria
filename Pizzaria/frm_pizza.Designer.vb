@@ -22,7 +22,7 @@ Partial Class frm_pizza
     'Não o modifique usando o editor de códigos.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_pizza))
         Me.dgv_pizzas = New System.Windows.Forms.DataGridView()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -64,9 +64,9 @@ Partial Class frm_pizza
         '
         'Column3
         '
-        DataGridViewCellStyle2.Format = "C2"
-        DataGridViewCellStyle2.NullValue = Nothing
-        Me.Column3.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle3.Format = "C2"
+        DataGridViewCellStyle3.NullValue = Nothing
+        Me.Column3.DefaultCellStyle = DataGridViewCellStyle3
         Me.Column3.HeaderText = "PREÇO"
         Me.Column3.MinimumWidth = 6
         Me.Column3.Name = "Column3"
@@ -149,7 +149,7 @@ Partial Class frm_pizza
         Me.Label8.AutoSize = True
         Me.Label8.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Label8.Font = New System.Drawing.Font("Microsoft PhagsPa", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(144, 26)
+        Me.Label8.Location = New System.Drawing.Point(175, 26)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(181, 49)
         Me.Label8.TabIndex = 31
