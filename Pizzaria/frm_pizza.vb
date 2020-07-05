@@ -11,6 +11,7 @@
                 MsgBox("Cadastro realizado com sucesso", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, "Atenção!")
                 txt_nova_pizza.Focus()
                 txt_nova_pizza.Clear()
+                txt_valor.Clear()
                 carregar_pizza()
             End If
         Catch ex As Exception

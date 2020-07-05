@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class tela_pedidos
     Inherits System.Windows.Forms.Form
 
     'Descartar substituições de formulário para limpar a lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,9 +20,10 @@ Partial Class tela_pedidos
     'OBSERVAÇÃO: o procedimento a seguir é exigido pelo Windows Form Designer
     'Pode ser modificado usando o Windows Form Designer.  
     'Não o modifique usando o editor de códigos.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(tela_pedidos))
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.lbl_login = New System.Windows.Forms.Label()
         Me.btn_novo_cadastro = New System.Windows.Forms.Button()
@@ -39,13 +40,6 @@ Partial Class tela_pedidos
         Me.Column6 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.txt_busca_telefone = New System.Windows.Forms.TextBox()
         Me.dgv_pedidos_andamento = New System.Windows.Forms.DataGridView()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.txt_busca_pedido = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -54,6 +48,13 @@ Partial Class tela_pedidos
         Me.Column15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column16 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Column11 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.txt_busca_pedido = New System.Windows.Forms.TextBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
         CType(Me.dgv_clientes, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgv_pedidos_andamento, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -62,7 +63,7 @@ Partial Class tela_pedidos
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(659, 262)
+        Me.Label4.Location = New System.Drawing.Point(675, 640)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(63, 21)
         Me.Label4.TabIndex = 18
@@ -72,7 +73,8 @@ Partial Class tela_pedidos
         '
         Me.lbl_login.AutoSize = True
         Me.lbl_login.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_login.Location = New System.Drawing.Point(744, 262)
+        Me.lbl_login.ForeColor = System.Drawing.SystemColors.HotTrack
+        Me.lbl_login.Location = New System.Drawing.Point(744, 639)
         Me.lbl_login.Name = "lbl_login"
         Me.lbl_login.Size = New System.Drawing.Size(70, 22)
         Me.lbl_login.TabIndex = 17
@@ -81,55 +83,58 @@ Partial Class tela_pedidos
         'btn_novo_cadastro
         '
         Me.btn_novo_cadastro.AutoSize = True
+        Me.btn_novo_cadastro.BackColor = System.Drawing.SystemColors.MenuHighlight
         Me.btn_novo_cadastro.Font = New System.Drawing.Font("Microsoft YaHei", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_novo_cadastro.Location = New System.Drawing.Point(481, 497)
+        Me.btn_novo_cadastro.ForeColor = System.Drawing.SystemColors.HighlightText
+        Me.btn_novo_cadastro.Location = New System.Drawing.Point(468, 605)
         Me.btn_novo_cadastro.Name = "btn_novo_cadastro"
-        Me.btn_novo_cadastro.Size = New System.Drawing.Size(245, 77)
+        Me.btn_novo_cadastro.Size = New System.Drawing.Size(198, 61)
         Me.btn_novo_cadastro.TabIndex = 15
-        Me.btn_novo_cadastro.Text = "NOVO CADASTRO"
-        Me.btn_novo_cadastro.UseVisualStyleBackColor = True
+        Me.btn_novo_cadastro.Text = "Novo Cadastro"
+        Me.btn_novo_cadastro.UseVisualStyleBackColor = False
         '
         'txt_busca_cliente
         '
         Me.txt_busca_cliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_busca_cliente.Location = New System.Drawing.Point(153, 544)
+        Me.txt_busca_cliente.Location = New System.Drawing.Point(191, 640)
         Me.txt_busca_cliente.Name = "txt_busca_cliente"
-        Me.txt_busca_cliente.Size = New System.Drawing.Size(295, 26)
+        Me.txt_busca_cliente.Size = New System.Drawing.Size(260, 26)
         Me.txt_busca_cliente.TabIndex = 14
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(58, 497)
+        Me.Label3.Location = New System.Drawing.Point(96, 608)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(102, 22)
+        Me.Label3.Size = New System.Drawing.Size(84, 22)
         Me.Label3.TabIndex = 13
-        Me.Label3.Text = "TELEFONE: "
+        Me.Label3.Text = "Telefone:"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(58, 546)
+        Me.Label2.Location = New System.Drawing.Point(115, 644)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(72, 22)
+        Me.Label2.Size = New System.Drawing.Size(65, 22)
         Me.Label2.TabIndex = 12
-        Me.Label2.Text = "NOME: "
+        Me.Label2.Text = "Nome:"
         '
         'dgv_clientes
         '
         Me.dgv_clientes.AllowUserToAddRows = False
         Me.dgv_clientes.AllowUserToDeleteRows = False
         Me.dgv_clientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.dgv_clientes.BackgroundColor = System.Drawing.SystemColors.MenuHighlight
         Me.dgv_clientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgv_clientes.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column7, Me.Column6})
-        Me.dgv_clientes.Location = New System.Drawing.Point(33, 296)
+        Me.dgv_clientes.Location = New System.Drawing.Point(33, 343)
         Me.dgv_clientes.Name = "dgv_clientes"
         Me.dgv_clientes.ReadOnly = True
         Me.dgv_clientes.RowHeadersWidth = 51
         Me.dgv_clientes.RowTemplate.Height = 24
-        Me.dgv_clientes.Size = New System.Drawing.Size(789, 182)
+        Me.dgv_clientes.Size = New System.Drawing.Size(789, 242)
         Me.dgv_clientes.TabIndex = 11
         '
         'Column1
@@ -194,7 +199,7 @@ Partial Class tela_pedidos
         'txt_busca_telefone
         '
         Me.txt_busca_telefone.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_busca_telefone.Location = New System.Drawing.Point(189, 494)
+        Me.txt_busca_telefone.Location = New System.Drawing.Point(191, 605)
         Me.txt_busca_telefone.Name = "txt_busca_telefone"
         Me.txt_busca_telefone.Size = New System.Drawing.Size(260, 29)
         Me.txt_busca_telefone.TabIndex = 19
@@ -204,84 +209,16 @@ Partial Class tela_pedidos
         Me.dgv_pedidos_andamento.AllowUserToAddRows = False
         Me.dgv_pedidos_andamento.AllowUserToDeleteRows = False
         Me.dgv_pedidos_andamento.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.dgv_pedidos_andamento.BackgroundColor = System.Drawing.SystemColors.ActiveCaption
         Me.dgv_pedidos_andamento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgv_pedidos_andamento.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column8, Me.Column9, Me.Column10, Me.Column12, Me.Column13, Me.Column15, Me.Column16, Me.Column11})
-        Me.dgv_pedidos_andamento.Location = New System.Drawing.Point(33, 60)
+        Me.dgv_pedidos_andamento.Location = New System.Drawing.Point(33, 31)
         Me.dgv_pedidos_andamento.Name = "dgv_pedidos_andamento"
         Me.dgv_pedidos_andamento.ReadOnly = True
         Me.dgv_pedidos_andamento.RowHeadersWidth = 51
         Me.dgv_pedidos_andamento.RowTemplate.Height = 24
-        Me.dgv_pedidos_andamento.Size = New System.Drawing.Size(789, 186)
+        Me.dgv_pedidos_andamento.Size = New System.Drawing.Size(789, 233)
         Me.dgv_pedidos_andamento.TabIndex = 20
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.Label1.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(29, 262)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(76, 19)
-        Me.Label1.TabIndex = 21
-        Me.Label1.Text = "CLIENTES"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.Label5.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(29, 19)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(201, 19)
-        Me.Label5.TabIndex = 22
-        Me.Label5.Text = "PEDIDOS EM ANDAMENTO"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft YaHei", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(246, 19)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(130, 19)
-        Me.Label6.TabIndex = 23
-        Me.Label6.Text = "Pedido número:"
-        '
-        'txt_busca_pedido
-        '
-        Me.txt_busca_pedido.Font = New System.Drawing.Font("Microsoft YaHei", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_busca_pedido.Location = New System.Drawing.Point(382, 19)
-        Me.txt_busca_pedido.Name = "txt_busca_pedido"
-        Me.txt_busca_pedido.Size = New System.Drawing.Size(100, 27)
-        Me.txt_busca_pedido.TabIndex = 24
-        '
-        'Button1
-        '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(488, 19)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(153, 27)
-        Me.Button1.TabIndex = 25
-        Me.Button1.Text = "BUSCAR"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(647, 19)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(167, 27)
-        Me.Button2.TabIndex = 26
-        Me.Button2.Text = "LIMPAR BUSCA"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(424, 262)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(180, 23)
-        Me.Button3.TabIndex = 27
-        Me.Button3.Text = "Limpar registro de pedidos"
-        Me.Button3.UseVisualStyleBackColor = True
         '
         'Column8
         '
@@ -309,6 +246,9 @@ Partial Class tela_pedidos
         '
         'Column12
         '
+        DataGridViewCellStyle2.Format = "C2"
+        DataGridViewCellStyle2.NullValue = Nothing
+        Me.Column12.DefaultCellStyle = DataGridViewCellStyle2
         Me.Column12.HeaderText = "VALOR"
         Me.Column12.MinimumWidth = 6
         Me.Column12.Name = "Column12"
@@ -348,13 +288,88 @@ Partial Class tela_pedidos
         Me.Column11.ReadOnly = True
         Me.Column11.Width = 72
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.SystemColors.Highlight
+        Me.Label1.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(29, 321)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(76, 19)
+        Me.Label1.TabIndex = 21
+        Me.Label1.Text = "CLIENTES"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.SystemColors.Highlight
+        Me.Label5.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(29, 9)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(201, 19)
+        Me.Label5.TabIndex = 22
+        Me.Label5.Text = "PEDIDOS EM ANDAMENTO"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft YaHei", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(92, 279)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(130, 19)
+        Me.Label6.TabIndex = 23
+        Me.Label6.Text = "Pedido número:"
+        '
+        'txt_busca_pedido
+        '
+        Me.txt_busca_pedido.Font = New System.Drawing.Font("Microsoft YaHei", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_busca_pedido.Location = New System.Drawing.Point(228, 276)
+        Me.txt_busca_pedido.Name = "txt_busca_pedido"
+        Me.txt_busca_pedido.Size = New System.Drawing.Size(100, 27)
+        Me.txt_busca_pedido.TabIndex = 24
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.Button1.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(334, 270)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(142, 37)
+        Me.Button1.TabIndex = 25
+        Me.Button1.Text = "Buscar"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.SystemColors.Highlight
+        Me.Button2.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.SystemColors.HighlightText
+        Me.Button2.Location = New System.Drawing.Point(482, 270)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(153, 37)
+        Me.Button2.TabIndex = 26
+        Me.Button2.Text = "Limpar Busca"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.SystemColors.Highlight
+        Me.Button3.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ForeColor = System.Drawing.SystemColors.HighlightText
+        Me.Button3.Location = New System.Drawing.Point(641, 270)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(173, 37)
+        Me.Button3.TabIndex = 27
+        Me.Button3.Text = "Apagar Tudo"
+        Me.Button3.UseVisualStyleBackColor = False
+        '
         'tela_pedidos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
         Me.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.ClientSize = New System.Drawing.Size(845, 580)
+        Me.ClientSize = New System.Drawing.Size(842, 678)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
@@ -373,7 +388,7 @@ Partial Class tela_pedidos
         Me.Controls.Add(Me.dgv_clientes)
         Me.Font = New System.Drawing.Font("Microsoft YaHei", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Name = "tela_pedidos"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "PEDIDOS"
         CType(Me.dgv_clientes, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgv_pedidos_andamento, System.ComponentModel.ISupportInitialize).EndInit()
