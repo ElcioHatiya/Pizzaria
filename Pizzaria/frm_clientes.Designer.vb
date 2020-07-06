@@ -222,6 +222,7 @@ Partial Class frm_clientes
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
+        Me.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.ClientSize = New System.Drawing.Size(402, 401)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)

@@ -143,13 +143,13 @@
                                             and senha = '" & .txt_senha.Text & "'
                                             and status = '" & ativar & "'
                                             and perfil = '" & Status & "' "
-            '  rs = db.Execute(sql)
-            'If rs.EOF = False Then
-            .btn_adminstrador.Show()
-            .btn_adminstrador.Select()
-            ' Else
-            '.btn_adminstrador.Visible = False
-            'End If
+            rs = db.Execute(sql)
+            If rs.EOF = False Then
+                .btn_adminstrador.Show()
+                .btn_adminstrador.Select()
+            Else
+                .btn_adminstrador.Visible = False
+            End If
         End With
     End Sub
 

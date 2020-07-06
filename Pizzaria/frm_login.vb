@@ -20,16 +20,16 @@
         sql = " select * from tb_usuario where nome = '" & txt_usuario.Text & "'
                                             And senha = '" & txt_senha.Text & "'
                                             and status = '" & ativar & "'"
-        ' rs = db.Execute(sql)
-        ' If rs.EOF = False Then
-        tela_pedidos.Show()
-        Me.Hide()
-        ' Else
-        ' MsgBox("Dados inválidos!", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Aviso!")
-        txt_senha.Clear()
-        txt_usuario.Clear()
-        txt_usuario.Select()
-        'End If
+        rs = db.Execute(sql)
+        If rs.EOF = False Then
+            tela_pedidos.Show()
+            Me.Hide()
+        Else
+            MsgBox("Dados inválidos!", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Aviso!")
+            txt_senha.Clear()
+            txt_usuario.Clear()
+            txt_usuario.Select()
+        End If
     End Sub
 
     'SENHA ADMIN
